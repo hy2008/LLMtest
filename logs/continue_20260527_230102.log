@@ -1,0 +1,81 @@
+已完成 28/29
+剩余 1个: ['nvidia/nemotron-3-nano-omni']
+
+============================================================
+# [29/29] nvidia/nemotron-3-nano-omni 23:01:03
+============================================================
+
+  [coding] 8题测试
+    [C1] 红黑树... OK 100
+    [C2] LRU缓存... OK 80
+    [C3] 生产者消费者... OK 90
+    [C4] 代码重构... OK 100
+    [C5] SQL防护... OK 100
+    [C6] 大数据... OK 100
+    [C7] 单元测试... OK 90
+    [C8] RESTful... OK 95
+
+  [agent] 8题测试
+    [A1] 单工具... OK 75
+    [A2] 多工具... OK 70
+    [A3] 条件... OK 80
+    [A4] 循环... OK 80
+    [A5] 错误恢复... OK 80
+    [A6] 人机协作... OK 55
+    [A7] 上下文... OK 65
+    [A8] 任务规划... OK 55
+
+  [reasoning] 8题测试
+    [R1] 逻辑... OK 75
+    [R2] 数学... OK 90
+    [R3] 实验... OK 70
+    [R4] 因果... OK 85
+    [R5] 模式... OK 65
+    [R6] 伦理... OK 90
+    [R7] 创新... OK 85
+    [R8] 元认知... OK 50
+
+  [performance] 5项测试
+    P1延迟: 479ms -> 100
+    P2吞吐: 79.8tok/s -> 100
+    P3响应: 707ms -> 60
+    P4并发4: 4/4 1.0s -> 100
+    P5并发8: 8/8 1.5s -> 100
+
+  [TOTAL] 82.2  coding:94 agent:70 reason:76 perf:92
+  [SAVED] 29/29
+
+============================================================
+RANKING
+============================================================
+🥇 1. qwen3.6-35b-a3b-claude-4.6-opus-reasonin  87.0 C:  99 A:  82 R:  78 P:  88
+🥈 2. qwopus3.6-35b-a3b-v1-mtp                  86.9 C:  94 A:  79 R:  86 P:  88
+🥉 3. qwopus-moe-35b-a3b                        86.8 C: 100 A:  78 R:  81 P:  88
+   4. huihui-qwen3.6-35b-a3b-claude-4.7-opus-a  85.4 C: 100 A:  85 R:  69 P:  84
+   5. qwen3.6-35b-a3b-mlx-oq8                   84.6 C:  94 A:  86 R:  69 P:  88
+   6. qwopus3.6-35b-a3b-v1                      83.9 C:  89 A:  81 R:  81 P:  84
+   7. havenoammo/qwen3.6-35b-a3b-mtp            83.4 C:  93 A:  82 R:  71 P:  88
+   8. unsloth/qwen3.6-35b-a3b-mtp               83.2 C:  97 A:  79 R:  69 P:  88
+   9. huihui-qwen3.6-35b-a3b-claude-4.7-opus-a  83.0 C:  88 A:  86 R:  70 P:  88
+  10. nvidia/nemotron-3-nano-omni               82.2 C:  94 A:  70 R:  76 P:  92
+  11. huihui-qwen3.6-35b-a3b-claude-4.7-opus-a  81.8 C:  88 A:  82 R:  71 P:  88
+  12. qwen/qwen3.6-35b-a3b                      81.3 C:  96 A:  78 R:  67 P:  84
+  13. qwen3.6-35b-a3b-oq8                       79.6 C:  85 A:  81 R:  66 P:  88
+  14. qwopus3.6-27b-v2-mtp                      77.1 C:  86 A:  68 R:  81 P:  72
+  15. qwopus3.6-27b-v2                          76.9 C:  85 A:  68 R:  81 P:  72
+  16. qwopus3.6-27b-v2-mlx                      75.4 C:  92 A:  59 R:  76 P:  72
+  17. qwopus3.5-9b-coder                        73.3 C:  85 A:  63 R:  70 P:  76
+  18. qwen3.6-35b-a3b-nvfp4                     71.5 C:  50 A:  82 R:  74 P:  88
+  19. qwen/qwen3.6-27b                          71.3 C:  84 A:  63 R:  66 P:  72
+  20. qwen3.6-27b-mlx-oq4                       69.6 C:  79 A:  63 R:  65 P:  72
+  21. froggeric/qwen3.6-27b-mtp                 68.9 C:  76 A:  64 R:  65 P:  72
+  22. qwen3.6-27b-mlx-vl-oq8                    68.9 C:  72 A:  68 R:  64 P:  72
+  23. deepsweet/qwen3.6-27b-mlx-oq8             68.8 C:  73 A:  65 R:  66 P:  72
+  24. frogggias/qwen3.6-27b-mlx-oq8@8bit        68.6 C:  81 A:  57 R:  66 P:  72
+  25. unsloth/qwen3.6-27b-mtp                   68.3 C:  73 A:  64 R:  65 P:  72
+  26. bearzi/qwen3.6-27b-oq8@8bit               67.2 C:  65 A:  67 R:  68 P:  72
+  27. qwen3.6-27b-nvfp4                         65.9 C:  62 A:  64 R:  68 P:  72
+  28. zesming/qwen3.6-27b-oq8@8bit              62.7 C:  65 A:  57 R:  61 P:  72
+  29. qwopus3.6-35b-a3b-v1-oq8-mtp               0.0 C:   0 A:   0 R:   0 P:   0
+
+DONE 29 models

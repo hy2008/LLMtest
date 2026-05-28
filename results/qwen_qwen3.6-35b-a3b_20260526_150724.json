@@ -1,0 +1,416 @@
+{
+  "model_name": "qwen/qwen3.6-35b-a3b",
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "eval_time": "2026-05-26 14:46:53",
+  "overall_score": 115.1,
+  "dimensions": {
+    "coding": {
+      "score": 72.0,
+      "weight": 0.25,
+      "categories": {
+        "代码能力": {
+          "score": 72,
+          "max_score": 200,
+          "weight": 1.0,
+          "details": [
+            {
+              "id": "C1",
+              "name": "基础算法：红黑树实现",
+              "score": 8,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 0,
+                "quality": 25,
+                "edge_cases": 5
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C2",
+              "name": "系统设计：LRU缓存带TTL",
+              "score": 13,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 0,
+                "quality": 25,
+                "edge_cases": 25
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C3",
+              "name": "并发编程：生产者消费者队列",
+              "score": 11,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 0,
+                "quality": 25,
+                "edge_cases": 15
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C4",
+              "name": "代码重构：坏代码优化",
+              "score": 9,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 16,
+                "quality": 15,
+                "edge_cases": 5
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C5",
+              "name": "安全编码：SQL注入防护",
+              "score": 2,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 0,
+                "quality": 5,
+                "edge_cases": 5
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C6",
+              "name": "性能优化：大数据处理",
+              "score": 7,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 25,
+                "completeness": 0,
+                "quality": 15,
+                "edge_cases": 5
+              },
+              "syntax_ok": true
+            },
+            {
+              "id": "C7",
+              "name": "测试驱动：单元测试生成",
+              "score": 17,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 16,
+                "quality": 25,
+                "edge_cases": 15
+              },
+              "syntax_ok": false
+            },
+            {
+              "id": "C8",
+              "name": "API设计：RESTful服务",
+              "score": 5,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 5,
+                "completeness": 0,
+                "quality": 5,
+                "edge_cases": 15
+              },
+              "syntax_ok": false
+            }
+          ]
+        }
+      }
+    },
+    "agent": {
+      "score": 154.0,
+      "weight": 0.25,
+      "categories": {
+        "Agent能力": {
+          "score": 154,
+          "max_score": 200,
+          "weight": 1.0,
+          "details": [
+            {
+              "id": "A1",
+              "name": "单工具精确调用",
+              "score": 12,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 8,
+                "param_inference": 15,
+                "logic_flow": 5,
+                "format": 25
+              }
+            },
+            {
+              "id": "A2",
+              "name": "多工具顺序调用",
+              "score": 25,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            },
+            {
+              "id": "A3",
+              "name": "条件分支决策",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            },
+            {
+              "id": "A4",
+              "name": "循环迭代处理",
+              "score": 20,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 15,
+                "logic_flow": 15,
+                "format": 25
+              }
+            },
+            {
+              "id": "A5",
+              "name": "错误恢复与重试",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            },
+            {
+              "id": "A6",
+              "name": "人机协作判断",
+              "score": 25,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            },
+            {
+              "id": "A7",
+              "name": "长对话记忆管理",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            },
+            {
+              "id": "A8",
+              "name": "复杂多步任务规划",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "tool_selection": 25,
+                "param_inference": 25,
+                "logic_flow": 25,
+                "format": 25
+              }
+            }
+          ]
+        }
+      }
+    },
+    "reasoning": {
+      "score": 137.0,
+      "weight": 0.25,
+      "categories": {
+        "通用推理": {
+          "score": 137,
+          "max_score": 200,
+          "weight": 1.0,
+          "details": [
+            {
+              "id": "R1",
+              "name": "形式逻辑：骑士与无赖谜题",
+              "score": 22,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 24,
+                "derivation": 25,
+                "clarity": 14,
+                "depth": 25
+              },
+              "content_length": 958
+            },
+            {
+              "id": "R2",
+              "name": "数学证明：素数无限性",
+              "score": 20,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 25,
+                "clarity": 20,
+                "depth": 25
+              },
+              "content_length": 1533
+            },
+            {
+              "id": "R3",
+              "name": "科学推理：实验设计",
+              "score": 15,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 15,
+                "clarity": 10,
+                "depth": 25
+              },
+              "content_length": 556
+            },
+            {
+              "id": "R4",
+              "name": "因果推断：相关vs因果",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 15,
+                "clarity": 23,
+                "depth": 25
+              },
+              "content_length": 1826
+            },
+            {
+              "id": "R5",
+              "name": "归纳推理：模式识别",
+              "score": 17,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 0,
+                "derivation": 15,
+                "clarity": 30,
+                "depth": 25
+              },
+              "content_length": 5601
+            },
+            {
+              "id": "R6",
+              "name": "伦理判断：电车难题变体",
+              "score": 18,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 15,
+                "clarity": 24,
+                "depth": 25
+              },
+              "content_length": 1990
+            },
+            {
+              "id": "R7",
+              "name": "创造性思维：创新解决方案",
+              "score": 6,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 5,
+                "clarity": 6,
+                "depth": 5
+              },
+              "content_length": 122
+            },
+            {
+              "id": "R8",
+              "name": "元认知：思维过程分析",
+              "score": 21,
+              "max_score": 25,
+              "breakdown": {
+                "correctness": 10,
+                "derivation": 25,
+                "clarity": 25,
+                "depth": 25
+              },
+              "content_length": 2022
+            }
+          ]
+        }
+      }
+    },
+    "performance": {
+      "score": 87.0,
+      "weight": 0.25,
+      "categories": {
+        "性能基准": {
+          "score": 87,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "首Token延迟",
+              "score": 10,
+              "max_score": 20,
+              "metrics": {
+                "avg_ms": 3658.4,
+                "p95_ms": 3676.15,
+                "samples": [
+                  3676.1484146118164,
+                  3642.4214839935303,
+                  3656.6364765167236
+                ]
+              }
+            },
+            {
+              "test": "吞吐量",
+              "score": 20,
+              "max_score": 20,
+              "metrics": {
+                "avg_tps": 71.18,
+                "avg_tokens": 2048.0
+              }
+            },
+            {
+              "test": "响应速度",
+              "score": 7,
+              "max_score": 10,
+              "metrics": {
+                "avg_ms": 808.72
+              }
+            },
+            {
+              "test": "4线程并发",
+              "score": 25,
+              "max_score": 25,
+              "metrics": {
+                "success": 4,
+                "avg_latency_ms": 4277.64,
+                "total_time_ms": 4316.76
+              }
+            },
+            {
+              "test": "8线程并发",
+              "score": 25,
+              "max_score": 25,
+              "metrics": {
+                "success": 8,
+                "avg_latency_ms": 2811.74,
+                "total_time_ms": 3775.77
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

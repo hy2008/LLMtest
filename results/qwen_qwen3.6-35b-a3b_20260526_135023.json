@@ -1,0 +1,164 @@
+{
+  "model_name": "qwen/qwen3.6-35b-a3b",
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "eval_time": "2026-05-26 13:41:31",
+  "overall_score": 74.95,
+  "dimensions": {
+    "coding": {
+      "score": 38.0,
+      "weight": 0.25,
+      "categories": {
+        "代码能力": {
+          "score": 38,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "并发安全LRU缓存",
+              "score": 15,
+              "max_score": 25,
+              "syntax_ok": false
+            },
+            {
+              "test": "表达式解析器",
+              "score": 0,
+              "max_score": 25,
+              "syntax_ok": false
+            },
+            {
+              "test": "异步任务调度器",
+              "score": 8,
+              "max_score": 25,
+              "syntax_ok": true
+            },
+            {
+              "test": "SQL解析与验证",
+              "score": 15,
+              "max_score": 25,
+              "syntax_ok": false
+            }
+          ]
+        }
+      }
+    },
+    "agent": {
+      "score": 100.0,
+      "weight": 0.25,
+      "categories": {
+        "Agent能力": {
+          "score": 100,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "多工具组合调用",
+              "score": 25,
+              "max_score": 25
+            },
+            {
+              "test": "工具参数推断",
+              "score": 25,
+              "max_score": 25
+            },
+            {
+              "test": "错误处理与重试",
+              "score": 25,
+              "max_score": 25
+            },
+            {
+              "test": "多轮对话工具链",
+              "score": 25,
+              "max_score": 25
+            }
+          ]
+        }
+      }
+    },
+    "reasoning": {
+      "score": 100.0,
+      "weight": 0.25,
+      "categories": {
+        "通用推理": {
+          "score": 100.0,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "复杂逻辑推理",
+              "score": 25.0,
+              "max_score": 25,
+              "content_length": 4514
+            },
+            {
+              "test": "数学建模与优化",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 209
+            },
+            {
+              "test": "复杂阅读理解",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 390
+            },
+            {
+              "test": "深度知识问答",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 7776
+            }
+          ]
+        }
+      }
+    },
+    "performance": {
+      "score": 57.0,
+      "weight": 0.25,
+      "categories": {
+        "性能基准": {
+          "score": 57,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "首Token延迟",
+              "score": 5,
+              "max_score": 20,
+              "metrics": {
+                "avg_ttft_ms": 7374.93
+              }
+            },
+            {
+              "test": "吞吐量",
+              "score": 20,
+              "max_score": 20,
+              "metrics": {
+                "avg_tps": 70.23
+              }
+            },
+            {
+              "test": "响应速度",
+              "score": 7,
+              "max_score": 10,
+              "metrics": {
+                "latency_ms": 1527.88
+              }
+            },
+            {
+              "test": "4线程并发",
+              "score": 25,
+              "max_score": 50,
+              "metrics": {
+                "success_count": 4,
+                "avg_latency_ms": 8301.77,
+                "total_time_ms": 8320.2,
+                "total_tokens": 1024
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

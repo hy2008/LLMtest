@@ -1,0 +1,35 @@
+[
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1-mtp",
+    "eval_time": "2026-05-26T15:38:26.813622",
+    "scores": {
+      "coding": 92.5,
+      "agent": 75.0,
+      "reasoning": 92.5,
+      "performance": 40
+    },
+    "total_score": 75.0
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-oq8",
+    "eval_time": "2026-05-26T15:42:31.666291",
+    "scores": {
+      "coding": 0.0,
+      "agent": 0.0,
+      "reasoning": 67.5,
+      "performance": 20
+    },
+    "total_score": 21.9
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-claude-4.6-opus-reasoning-distilled",
+    "eval_time": "2026-05-26T15:45:10.548383",
+    "scores": {
+      "coding": 42.5,
+      "agent": 0.0,
+      "reasoning": 0.0,
+      "performance": 20
+    },
+    "total_score": 15.6
+  }
+]

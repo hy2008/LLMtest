@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Studio 模型评估报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { text-align: center; color: #94a3b8; margin-bottom: 30px; }
+        .section {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #334155;
+        }
+        .section h2 {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(to bottom, #60a5fa, #a78bfa);
+            border-radius: 2px;
+        }
+
+        /* 排行榜表格 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+        th {
+            background: #334155;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #cbd5e1;
+            border-bottom: 2px solid #475569;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #1e293b;
+        }
+        tr:hover { background: #1e293b; }
+        .rank-1 { color: #fbbf24; font-weight: bold; }
+        .rank-2 { color: #94a3b8; font-weight: bold; }
+        .rank-3 { color: #d97706; font-weight: bold; }
+
+        /* 分数条 */
+        .score-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .score-bar {
+            flex: 1;
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .score-excellent { background: linear-gradient(90deg, #22c55e, #4ade80); }
+        .score-good { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .score-average { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .score-poor { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+        /* 总分高亮 */
+        .total-score {
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 8px;
+        }
+        .score-high { color: #4ade80; }
+        .score-mid { color: #fbbf24; }
+        .score-low { color: #f87171; }
+
+        /* 模型详情卡片 */
+        .model-card {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid #334155;
+        }
+        .model-card h3 {
+            color: #e2e8f0;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        .dimension-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        .dimension-item {
+            background: #1e293b;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .dimension-item h4 {
+            color: #94a3b8;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+        .dimension-score {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .category-list {
+            margin-top: 8px;
+            font-size: 0.85em;
+        }
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #334155;
+        }
+        .category-item:last-child { border-bottom: none; }
+
+        /* 性能指标 */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .metric-card {
+            background: #0f172a;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+        .metric-label {
+            color: #94a3b8;
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
+
+        /* 雷达图占位 */
+        .radar-placeholder {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .section { padding: 16px; }
+            table { font-size: 0.85em; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 LM Studio 模型评估报告</h1>
+        <p class="subtitle">生成时间: 2026-05-26 13:02:01 | 共评估 4 个模型</p>
+
+        <!-- 排行榜 -->
+        <div class="section">
+            <h2>🏆 综合排行榜</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>模型</th>
+                        <th>代码能力</th>
+                        <th>Agent能力</th>
+                        <th>通用推理</th>
+                        <th>性能</th>
+                        <th>综合评分</th>
+                    </tr>
+                </thead>
+                <tbody>                    <tr>
+                        <td class="rank-1">1</td>
+                        <td><strong>unsloth/qwen3.6-35b-a3b-mtp</strong><br><small style="color:#64748b">unsloth/qwen3.6-35b-a3b-mtp</small></td>
+                        <td>60.0</td>
+                        <td>45.0</td>
+                        <td>50.0</td>
+                        <td>43.0</td>
+                        <td>
+                            <span class="total-score score-mid">
+                                50.45
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rank-2">2</td>
+                        <td><strong>qwopus3.6-35b-a3b-v1-mtp</strong><br><small style="color:#64748b">qwopus3.6-35b-a3b-v1-mtp</small></td>
+                        <td>60.0</td>
+                        <td>40.0</td>
+                        <td>50.0</td>
+                        <td>43.0</td>
+                        <td>
+                            <span class="total-score score-mid">
+                                48.95
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rank-3">3</td>
+                        <td><strong>qwen/qwen3.6-35b-a3b</strong><br><small style="color:#64748b">qwen/qwen3.6-35b-a3b</small></td>
+                        <td>60.0</td>
+                        <td>40.0</td>
+                        <td>50.0</td>
+                        <td>43.0</td>
+                        <td>
+                            <span class="total-score score-mid">
+                                48.95
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rank-4">4</td>
+                        <td><strong>qwopus3.6-35b-a3b-v1-mtp</strong><br><small style="color:#64748b">qwopus3.6-35b-a3b-v1-mtp</small></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>1.0</td>
+                        <td>
+                            <span class="total-score score-low">
+                                1.0
+                            </span>
+                        </td>
+                    </tr>
+                
+            </table>
+        </div>
+
+        <!-- 模型详情 -->
+        
+        <div class="section">
+            <h2>📋  详细报告</h2>
+            <p style="color:#64748b; margin-bottom:16px">评估时间:  | 模型ID: </p>
+
+            <div class="dimension-grid">
+                
+                <div class="dimension-item">
+                    <h4></h4>
+                    <div class="dimension-score score-highscore-midscore-low">
+                        
+                    </div>
+                    <div class="score-bar-container" style="margin: 8px 0">
+                        <div class="score-bar">
+                            <div class="score-bar-fill score-excellentscore-goodscore-averagescore-poor"
+                                 style="width: %"></div>
+                        </div>
+                    </div>
+                    <div class="category-list">
+                        
+                        <div class="category-item">
+                            <span></span>
+                            <span>/</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            <h3 style="margin-top: 20px; color: #94a3b8">⚡ 性能指标</h3>
+            <div class="metrics-grid">
+                
+                <div class="metric-card">
+                    <div class="metric-value"></div>
+                    <div class="metric-label"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+
+        <div class="section">
+            <h2>📊 评估说明</h2>
+            <div style="color: #94a3b8; font-size: 0.9em;">
+                <p><strong>评分范围:</strong> 0-100 分，分数越高表示能力越强</p>
+                <p><strong>代码能力 (权重30%):</strong> 代码生成、代码补全、Debug调试、多语言编程</p>
+                <p><strong>Agent能力 (权重30%):</strong> Function Calling、工具选择、多步推理、指令遵循</p>
+                <p><strong>通用推理 (权重25%):</strong> 逻辑推理、阅读理解、数学能力、知识问答</p>
+                <p><strong>性能基准 (权重15%):</strong> 首Token延迟(TTFT)、吞吐量(TPS)、并发处理</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

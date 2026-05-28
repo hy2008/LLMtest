@@ -1,0 +1,63 @@
+{
+  "model_name": "qwopus3.6-35b-a3b-v1-mtp",
+  "model_id": "qwopus3.6-35b-a3b-v1-mtp",
+  "eval_time": "2026-05-26 11:12:30",
+  "overall_score": 1.0,
+  "dimensions": {
+    "performance": {
+      "score": 1.0,
+      "weight": 0.15,
+      "categories": {
+        "首Token延迟": {
+          "score": 0,
+          "max_score": 40,
+          "weight": 0.4,
+          "details": [
+            {
+              "test": "首Token延迟 (TTFT)",
+              "score": 0,
+              "max_score": 40,
+              "error": "base_url must have a trailing '/'"
+            }
+          ]
+        },
+        "吞吐量": {
+          "score": 0,
+          "max_score": 35,
+          "weight": 0.35,
+          "details": [
+            {
+              "test": "吞吐量 (TPS)",
+              "score": 0,
+              "max_score": 35,
+              "error": "base_url must have a trailing '/'"
+            }
+          ]
+        },
+        "并发处理": {
+          "score": 4,
+          "max_score": 25,
+          "weight": 0.25,
+          "details": [
+            {
+              "test": "并发处理",
+              "score": 4,
+              "max_score": 25,
+              "metrics": {
+                "concurrency": 3,
+                "successful_requests": 0,
+                "failed_requests": 3,
+                "success_rate": 0.0,
+                "total_time_ms": 0.11,
+                "requests_per_second": 0.0,
+                "overall_tps": 0.0,
+                "avg_latency_ms": 0
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

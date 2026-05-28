@@ -1,0 +1,133 @@
+{
+  "model_name": "qwopus3.6-35b-a3b-v1-mtp",
+  "model_id": "qwopus3.6-35b-a3b-v1-mtp",
+  "eval_time": "2026-05-26 11:33:16",
+  "overall_score": 48.95,
+  "dimensions": {
+    "coding": {
+      "score": 60.0,
+      "weight": 0.3,
+      "categories": {
+        "代码能力": {
+          "score": 60,
+          "max_score": 60,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "二分查找实现",
+              "score": 20,
+              "max_score": 20,
+              "found_keywords": 5
+            },
+            {
+              "test": "LRU缓存实现",
+              "score": 20,
+              "max_score": 20,
+              "found_keywords": 5
+            },
+            {
+              "test": "Debug Bug修复",
+              "score": 20,
+              "max_score": 20,
+              "found_keywords": 4
+            }
+          ]
+        }
+      }
+    },
+    "agent": {
+      "score": 40.0,
+      "weight": 0.3,
+      "categories": {
+        "Agent能力": {
+          "score": 40,
+          "max_score": 60,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "工具调用理解",
+              "score": 20,
+              "max_score": 20
+            },
+            {
+              "test": "多步推理",
+              "score": 10,
+              "max_score": 20
+            },
+            {
+              "test": "指令遵循",
+              "score": 10,
+              "max_score": 20
+            }
+          ]
+        }
+      }
+    },
+    "reasoning": {
+      "score": 50.0,
+      "weight": 0.25,
+      "categories": {
+        "通用推理": {
+          "score": 50,
+          "max_score": 60,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "逻辑推理",
+              "score": 10,
+              "max_score": 20
+            },
+            {
+              "test": "阅读理解",
+              "score": 20,
+              "max_score": 20
+            },
+            {
+              "test": "知识问答",
+              "score": 20,
+              "max_score": 20
+            }
+          ]
+        }
+      }
+    },
+    "performance": {
+      "score": 43.0,
+      "weight": 0.15,
+      "categories": {
+        "性能基准": {
+          "score": 43,
+          "max_score": 70,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "首Token延迟",
+              "score": 8,
+              "max_score": 30,
+              "metrics": {
+                "avg_ttft_ms": 22871.43
+              }
+            },
+            {
+              "test": "吞吐量",
+              "score": 25,
+              "max_score": 25,
+              "metrics": {
+                "avg_tps": 80.67
+              }
+            },
+            {
+              "test": "响应速度",
+              "score": 10,
+              "max_score": 15,
+              "metrics": {
+                "latency_ms": 1458.5
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

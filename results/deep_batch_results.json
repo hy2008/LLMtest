@@ -1,0 +1,3049 @@
+[
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1-oq8-mtp",
+    "eval_time": "2026-05-26T17:03:58.859764",
+    "categories": {
+      "coding": {
+        "score": 0.0,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 0,
+            "time": 9.9,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 0,
+            "time": 5.9,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          }
+        ]
+      },
+      "agent": {
+        "score": 0.0,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 0.0,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 0,
+            "time": 5.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 0,
+            "time": 5.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          }
+        ]
+      },
+      "performance": {
+        "score": 0.0,
+        "details": []
+      }
+    },
+    "total_score": 0.0
+  },
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1-mtp",
+    "eval_time": "2026-05-26T17:07:23.385801",
+    "categories": {
+      "coding": {
+        "score": 94.375,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 100,
+            "time": 47.3,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 34.9,
+            "tokens": 3000
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 95,
+            "time": 32.6,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 32.7,
+            "tokens": 2822
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 80,
+            "time": 34.8,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 100,
+            "time": 36.9,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 90,
+            "time": 32.6,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 90,
+            "time": 33.4,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 79.375,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 2.1,
+            "tokens": 176
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 80,
+            "time": 6.2,
+            "tokens": 505
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 65,
+            "time": 7.3,
+            "tokens": 626
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 70,
+            "time": 3.8,
+            "tokens": 325
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 80,
+            "time": 19.4,
+            "tokens": 1731
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 90,
+            "time": 15.9,
+            "tokens": 1377
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 90,
+            "time": 15.6,
+            "tokens": 1388
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 75,
+            "time": 12.0,
+            "tokens": 967
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 86.25,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 90,
+            "time": 27.4,
+            "tokens": 2500,
+            "response_length": 7666
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 90,
+            "time": 18.7,
+            "tokens": 1662,
+            "response_length": 1020
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 90,
+            "time": 31.3,
+            "tokens": 2500,
+            "response_length": 2329
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 90,
+            "time": 24.2,
+            "tokens": 1887,
+            "response_length": 1871
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 90,
+            "time": 26.0,
+            "tokens": 2500,
+            "response_length": 1170
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 33.4,
+            "tokens": 2500,
+            "response_length": 1436
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 85,
+            "time": 32.5,
+            "tokens": 2500,
+            "response_length": 9750
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 85,
+            "time": 25.2,
+            "tokens": 2215,
+            "response_length": 1150
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 766.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 84.7
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 702.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.1,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.8,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 86.9
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mtp",
+    "eval_time": "2026-05-26T17:18:01.992381",
+    "categories": {
+      "coding": {
+        "score": 100.0,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 100,
+            "time": 51.1,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 26.3,
+            "tokens": 2331
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 33.0,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 32.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 35.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 100,
+            "time": 34.2,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 100,
+            "time": 32.9,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 100,
+            "time": 31.1,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 85.0,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 2.0,
+            "tokens": 115
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 90,
+            "time": 5.8,
+            "tokens": 469
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 90,
+            "time": 4.6,
+            "tokens": 347
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 85,
+            "time": 3.1,
+            "tokens": 270
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 70,
+            "time": 10.4,
+            "tokens": 916
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 80,
+            "time": 7.2,
+            "tokens": 605
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 90,
+            "time": 9.7,
+            "tokens": 838
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 90,
+            "time": 13.7,
+            "tokens": 1234
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 69.375,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 55,
+            "time": 28.5,
+            "tokens": 2500,
+            "response_length": 181
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 80,
+            "time": 16.4,
+            "tokens": 1479,
+            "response_length": 802
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 70,
+            "time": 30.6,
+            "tokens": 2500,
+            "response_length": 1017
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 70,
+            "time": 32.6,
+            "tokens": 2499,
+            "response_length": 2126
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 75,
+            "time": 26.8,
+            "tokens": 2500,
+            "response_length": 1054
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 30.3,
+            "tokens": 2311,
+            "response_length": 1289
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 60,
+            "time": 31.2,
+            "tokens": 2500,
+            "response_length": 646
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 75,
+            "time": 8.2,
+            "tokens": 719,
+            "response_length": 803
+          }
+        ]
+      },
+      "performance": {
+        "score": 84.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 60,
+            "latency_ms": 1059.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 82.7
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 792.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.2,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.9,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 85.4
+  },
+  {
+    "model_id": "unsloth/qwen3.6-35b-a3b-mtp",
+    "eval_time": "2026-05-26T17:27:53.040394",
+    "categories": {
+      "coding": {
+        "score": 96.875,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 95,
+            "time": 40.0,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 30.8,
+            "tokens": 3000
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 30.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 29.2,
+            "tokens": 3000
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 32.6,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 95,
+            "time": 34.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 90,
+            "time": 29.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 29.6,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 78.75,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 2.5,
+            "tokens": 206
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 50,
+            "time": 18.6,
+            "tokens": 1848
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 90,
+            "time": 11.4,
+            "tokens": 1154
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 65,
+            "time": 14.4,
+            "tokens": 1374
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 65,
+            "time": 20.8,
+            "tokens": 2000
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 90,
+            "time": 20.6,
+            "tokens": 1998
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 20.1,
+            "tokens": 2000
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 85,
+            "time": 21.3,
+            "tokens": 2000
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 69.375,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 80,
+            "time": 25.5,
+            "tokens": 2500,
+            "response_length": 697
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 75,
+            "time": 22.9,
+            "tokens": 2358,
+            "response_length": 1075
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 60,
+            "time": 27.8,
+            "tokens": 2500,
+            "response_length": 911
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 75,
+            "time": 28.3,
+            "tokens": 2500,
+            "response_length": 1297
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 60,
+            "time": 23.8,
+            "tokens": 2500,
+            "response_length": 638
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 29.0,
+            "tokens": 2500,
+            "response_length": 1290
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 28.5,
+            "tokens": 2500,
+            "response_length": 858
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 65,
+            "time": 25.0,
+            "tokens": 2500,
+            "response_length": 817
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 640.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 94.7
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 598.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 0.9,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.4,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 83.2
+  },
+  {
+    "model_id": "havenoammo/qwen3.6-35b-a3b-mtp",
+    "eval_time": "2026-05-26T17:38:41.707032",
+    "categories": {
+      "coding": {
+        "score": 93.125,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 85,
+            "time": 52.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 34.3,
+            "tokens": 3000
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 95,
+            "time": 34.6,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 85,
+            "time": 34.6,
+            "tokens": 3000
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 35.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 90,
+            "time": 37.8,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 95,
+            "time": 34.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 33.5,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 81.875,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 4.9,
+            "tokens": 387
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 75,
+            "time": 11.2,
+            "tokens": 1002
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 90,
+            "time": 15.1,
+            "tokens": 1266
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 65,
+            "time": 14.7,
+            "tokens": 1231
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 60,
+            "time": 22.8,
+            "tokens": 2000
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 80,
+            "time": 23.0,
+            "tokens": 2000
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 22.9,
+            "tokens": 2000
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 100,
+            "time": 23.4,
+            "tokens": 2000
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 70.625,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 80,
+            "time": 28.9,
+            "tokens": 2500,
+            "response_length": 898
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 65,
+            "time": 21.7,
+            "tokens": 1917,
+            "response_length": 909
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 70,
+            "time": 32.8,
+            "tokens": 2500,
+            "response_length": 1274
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 60,
+            "time": 31.4,
+            "tokens": 2500,
+            "response_length": 670
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 60,
+            "time": 26.8,
+            "tokens": 2500,
+            "response_length": 659
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 85,
+            "time": 31.8,
+            "tokens": 2500,
+            "response_length": 1253
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 32.7,
+            "tokens": 2500,
+            "response_length": 529
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 75,
+            "time": 28.3,
+            "tokens": 2500,
+            "response_length": 943
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 702.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 84.5
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 763.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.1,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.7,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 83.4
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-vmlx-mxfp8",
+    "eval_time": "2026-05-26T17:50:43.574812",
+    "categories": {
+      "coding": {
+        "score": 87.5,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 0,
+            "time": 48.2,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 43.5,
+            "tokens": 2999
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 27.5,
+            "tokens": 2242
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 10.2,
+            "tokens": 800
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 36.9,
+            "tokens": 2999
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 100,
+            "time": 31.2,
+            "tokens": 2530
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 100,
+            "time": 36.9,
+            "tokens": 2999
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 100,
+            "time": 37.1,
+            "tokens": 2999
+          }
+        ]
+      },
+      "agent": {
+        "score": 81.875,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 1.0,
+            "tokens": 47
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 90,
+            "time": 2.5,
+            "tokens": 170
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 75,
+            "time": 3.5,
+            "tokens": 260
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 75,
+            "time": 5.0,
+            "tokens": 388
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 70,
+            "time": 8.8,
+            "tokens": 702
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 80,
+            "time": 5.0,
+            "tokens": 391
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 80,
+            "time": 6.4,
+            "tokens": 504
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 100,
+            "time": 24.7,
+            "tokens": 1999
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 71.25,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 80,
+            "time": 30.6,
+            "tokens": 2499,
+            "response_length": 601
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 65,
+            "time": 18.9,
+            "tokens": 1526,
+            "response_length": 671
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 65,
+            "time": 30.8,
+            "tokens": 2499,
+            "response_length": 982
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 70,
+            "time": 30.5,
+            "tokens": 2499,
+            "response_length": 1715
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 75,
+            "time": 30.8,
+            "tokens": 2499,
+            "response_length": 1161
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 27.0,
+            "tokens": 2207,
+            "response_length": 1617
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 30.8,
+            "tokens": 2499,
+            "response_length": 10246
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 75,
+            "time": 8.1,
+            "tokens": 626,
+            "response_length": 734
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 858.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 63.8
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 787.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.4,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 2.4,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 81.8
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mlx",
+    "eval_time": "2026-05-26T18:00:29.479350",
+    "categories": {
+      "coding": {
+        "score": 88.125,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 85,
+            "time": 51.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 80,
+            "time": 41.7,
+            "tokens": 2999
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 30.8,
+            "tokens": 2232
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 75,
+            "time": 41.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 65,
+            "time": 41.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 100,
+            "time": 41.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 100,
+            "time": 36.8,
+            "tokens": 2652
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 100,
+            "time": 41.6,
+            "tokens": 2999
+          }
+        ]
+      },
+      "agent": {
+        "score": 86.25,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 1.5,
+            "tokens": 61
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 90,
+            "time": 4.7,
+            "tokens": 322
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 90,
+            "time": 6.0,
+            "tokens": 418
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 90,
+            "time": 3.8,
+            "tokens": 261
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 80,
+            "time": 9.9,
+            "tokens": 701
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 90,
+            "time": 9.9,
+            "tokens": 703
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 80,
+            "time": 5.4,
+            "tokens": 373
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 85,
+            "time": 27.8,
+            "tokens": 1999
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 70.0,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 90,
+            "time": 31.6,
+            "tokens": 2276,
+            "response_length": 1123
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 65,
+            "time": 26.1,
+            "tokens": 1888,
+            "response_length": 740
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 70,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 1387
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 75,
+            "time": 34.7,
+            "tokens": 2499,
+            "response_length": 1858
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 65,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 810
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 34.7,
+            "tokens": 2499,
+            "response_length": 1054
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 50,
+            "time": 34.7,
+            "tokens": 2499,
+            "response_length": 71
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 75,
+            "time": 11.3,
+            "tokens": 801,
+            "response_length": 944
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 665.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 54.7
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 838.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.0,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 2.2,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 83.0
+  },
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1",
+    "eval_time": "2026-05-26T18:11:56.793504",
+    "categories": {
+      "coding": {
+        "score": 89.375,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 90,
+            "time": 53.9,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 40.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 70,
+            "time": 39.9,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 30.0,
+            "tokens": 2244
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 70,
+            "time": 40.4,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 100,
+            "time": 40.5,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 90,
+            "time": 40.5,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 40.4,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 81.25,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 3.0,
+            "tokens": 176
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 60,
+            "time": 9.3,
+            "tokens": 646
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 90,
+            "time": 9.4,
+            "tokens": 695
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 65,
+            "time": 5.9,
+            "tokens": 397
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 80,
+            "time": 17.1,
+            "tokens": 1280
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 80,
+            "time": 20.8,
+            "tokens": 1558
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 17.7,
+            "tokens": 1327
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 90,
+            "time": 14.8,
+            "tokens": 1105
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 80.625,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 55,
+            "time": 33.3,
+            "tokens": 2500,
+            "response_length": 190
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 90,
+            "time": 20.0,
+            "tokens": 1501,
+            "response_length": 1027
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 90,
+            "time": 32.2,
+            "tokens": 2413,
+            "response_length": 2272
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 90,
+            "time": 25.5,
+            "tokens": 1876,
+            "response_length": 1882
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 90,
+            "time": 33.3,
+            "tokens": 2500,
+            "response_length": 1170
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 75,
+            "time": 33.8,
+            "tokens": 2500,
+            "response_length": 1474
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 33.4,
+            "tokens": 2500,
+            "response_length": 698
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 85,
+            "time": 32.4,
+            "tokens": 2427,
+            "response_length": 1578
+          }
+        ]
+      },
+      "performance": {
+        "score": 84.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 60,
+            "latency_ms": 1240.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 70.8
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 732.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.0,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.5,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 83.9
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-mlx-oq8",
+    "eval_time": "2026-05-26T18:23:58.465849",
+    "categories": {
+      "coding": {
+        "score": 94.375,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 85,
+            "time": 50.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 41.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 41.8,
+            "tokens": 2999
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 41.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 95,
+            "time": 41.8,
+            "tokens": 2999
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 95,
+            "time": 41.5,
+            "tokens": 2999
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 85,
+            "time": 41.5,
+            "tokens": 2999
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 41.5,
+            "tokens": 2999
+          }
+        ]
+      },
+      "agent": {
+        "score": 86.25,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 3.2,
+            "tokens": 183
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 90,
+            "time": 24.2,
+            "tokens": 1739
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 60,
+            "time": 22.7,
+            "tokens": 1606
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 90,
+            "time": 17.9,
+            "tokens": 1290
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 90,
+            "time": 27.7,
+            "tokens": 1999
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 90,
+            "time": 25.4,
+            "tokens": 1801
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 27.7,
+            "tokens": 1999
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 85,
+            "time": 27.7,
+            "tokens": 1999
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 68.75,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 65,
+            "time": 32.0,
+            "tokens": 2308,
+            "response_length": 936
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 80,
+            "time": 26.9,
+            "tokens": 1918,
+            "response_length": 899
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 75,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 1021
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 70,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 1370
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 65,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 655
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 1135
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 50,
+            "time": 34.6,
+            "tokens": 2499,
+            "response_length": 16
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 75,
+            "time": 34.7,
+            "tokens": 2499,
+            "response_length": 701
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 901.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 66.9
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 892.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.4,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 2.3,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 84.6
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-nvfp4",
+    "eval_time": "2026-05-26T18:37:58.172611",
+    "categories": {
+      "coding": {
+        "score": 50.0,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 0,
+            "time": 37.8,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 100,
+            "time": 35.1,
+            "tokens": 2999
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 29.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 29.6,
+            "tokens": 2999
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 29.3,
+            "tokens": 2999
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 0,
+            "time": 29.5,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 0,
+            "time": 35.6,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 0,
+            "time": 34.7,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          }
+        ]
+      },
+      "agent": {
+        "score": 82.5,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 8.3,
+            "tokens": 277
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 60,
+            "time": 19.5,
+            "tokens": 1999
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 100,
+            "time": 19.6,
+            "tokens": 1999
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 80,
+            "time": 17.9,
+            "tokens": 1816
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 50,
+            "time": 19.6,
+            "tokens": 1999
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 100,
+            "time": 19.7,
+            "tokens": 1999
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 19.7,
+            "tokens": 1999
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 85,
+            "time": 19.6,
+            "tokens": 1999
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 74.375,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 90,
+            "time": 24.6,
+            "tokens": 2499,
+            "response_length": 6919
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 80,
+            "time": 24.0,
+            "tokens": 2453,
+            "response_length": 848
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 55,
+            "time": 24.5,
+            "tokens": 2499,
+            "response_length": 435
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 80,
+            "time": 24.5,
+            "tokens": 2499,
+            "response_length": 747
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 60,
+            "time": 24.5,
+            "tokens": 2499,
+            "response_length": 558
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 24.5,
+            "tokens": 2499,
+            "response_length": 10025
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 24.7,
+            "tokens": 2499,
+            "response_length": 8137
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 90,
+            "time": 24.6,
+            "tokens": 2499,
+            "response_length": 7702
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 918.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 96.6
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 592.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.1,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 2.1,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 71.5
+  },
+  {
+    "model_id": "qwen/qwen3.6-35b-a3b",
+    "eval_time": "2026-05-26T18:48:50.830221",
+    "categories": {
+      "coding": {
+        "score": 95.625,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 95,
+            "time": 57.5,
+            "tokens": 3000
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 95,
+            "time": 39.1,
+            "tokens": 3000
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 95,
+            "time": 39.1,
+            "tokens": 3000
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 39.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 95,
+            "time": 39.7,
+            "tokens": 3000
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 90,
+            "time": 39.1,
+            "tokens": 3000
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 100,
+            "time": 39.1,
+            "tokens": 3000
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 39.6,
+            "tokens": 3000
+          }
+        ]
+      },
+      "agent": {
+        "score": 77.5,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 2.0,
+            "tokens": 134
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 50,
+            "time": 26.1,
+            "tokens": 2000
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 60,
+            "time": 18.0,
+            "tokens": 1379
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 80,
+            "time": 20.7,
+            "tokens": 1541
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 90,
+            "time": 26.6,
+            "tokens": 2000
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 80,
+            "time": 26.1,
+            "tokens": 2000
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 100,
+            "time": 26.1,
+            "tokens": 2000
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 75,
+            "time": 26.1,
+            "tokens": 2000
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 66.875,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 55,
+            "time": 33.2,
+            "tokens": 2500,
+            "response_length": 419
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 80,
+            "time": 29.1,
+            "tokens": 2192,
+            "response_length": 975
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 75,
+            "time": 32.6,
+            "tokens": 2500,
+            "response_length": 1193
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 60,
+            "time": 32.5,
+            "tokens": 2500,
+            "response_length": 752
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 75,
+            "time": 32.5,
+            "tokens": 2500,
+            "response_length": 1230
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 70,
+            "time": 33.1,
+            "tokens": 2500,
+            "response_length": 1383
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 60,
+            "time": 32.6,
+            "tokens": 2500,
+            "response_length": 156
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 60,
+            "time": 32.6,
+            "tokens": 2500,
+            "response_length": 786
+          }
+        ]
+      },
+      "performance": {
+        "score": 84.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 60,
+            "latency_ms": 1294.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 72.0
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 768.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.1,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 1.5,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 81.3
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-oq8",
+    "eval_time": "2026-05-26T19:02:27.253703",
+    "categories": {
+      "coding": {
+        "score": 85.0,
+        "details": [
+          {
+            "id": "C1",
+            "name": "基础算法：红黑树实现",
+            "score": 0,
+            "time": 46.4,
+            "error": "400 Client Error: Bad Request for url: http://59.55.125.214:1024/v1/chat/completions"
+          },
+          {
+            "id": "C2",
+            "name": "系统设计：LRU缓存带TTL",
+            "score": 95,
+            "time": 42.3,
+            "tokens": 2999
+          },
+          {
+            "id": "C3",
+            "name": "并发编程：生产者消费者队列",
+            "score": 100,
+            "time": 37.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C4",
+            "name": "代码重构：坏代码优化",
+            "score": 100,
+            "time": 37.3,
+            "tokens": 2999
+          },
+          {
+            "id": "C5",
+            "name": "安全编码：SQL注入防护",
+            "score": 100,
+            "time": 37.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C6",
+            "name": "性能优化：大数据处理",
+            "score": 90,
+            "time": 37.4,
+            "tokens": 2999
+          },
+          {
+            "id": "C7",
+            "name": "测试驱动：单元测试生成",
+            "score": 100,
+            "time": 37.2,
+            "tokens": 2999
+          },
+          {
+            "id": "C8",
+            "name": "API设计：RESTful服务",
+            "score": 95,
+            "time": 37.3,
+            "tokens": 2999
+          }
+        ]
+      },
+      "agent": {
+        "score": 81.25,
+        "details": [
+          {
+            "id": "A1",
+            "name": "单工具精确调用",
+            "score": 85,
+            "time": 10.2,
+            "tokens": 811
+          },
+          {
+            "id": "A2",
+            "name": "多工具顺序调用",
+            "score": 100,
+            "time": 25.0,
+            "tokens": 1999
+          },
+          {
+            "id": "A3",
+            "name": "条件分支决策",
+            "score": 65,
+            "time": 16.7,
+            "tokens": 1337
+          },
+          {
+            "id": "A4",
+            "name": "循环迭代处理",
+            "score": 65,
+            "time": 19.6,
+            "tokens": 1568
+          },
+          {
+            "id": "A5",
+            "name": "错误恢复与重试",
+            "score": 65,
+            "time": 24.8,
+            "tokens": 1999
+          },
+          {
+            "id": "A6",
+            "name": "人机协作判断",
+            "score": 90,
+            "time": 24.8,
+            "tokens": 1999
+          },
+          {
+            "id": "A7",
+            "name": "长对话记忆管理",
+            "score": 80,
+            "time": 19.2,
+            "tokens": 1542
+          },
+          {
+            "id": "A8",
+            "name": "复杂多步任务规划",
+            "score": 100,
+            "time": 25.0,
+            "tokens": 1999
+          }
+        ]
+      },
+      "reasoning": {
+        "score": 66.25,
+        "details": [
+          {
+            "id": "R1",
+            "name": "形式逻辑：骑士与无赖谜题",
+            "score": 65,
+            "time": 30.9,
+            "tokens": 2499,
+            "response_length": 906
+          },
+          {
+            "id": "R2",
+            "name": "数学证明：素数无限性",
+            "score": 80,
+            "time": 22.8,
+            "tokens": 1847,
+            "response_length": 855
+          },
+          {
+            "id": "R3",
+            "name": "科学推理：实验设计",
+            "score": 60,
+            "time": 30.9,
+            "tokens": 2499,
+            "response_length": 706
+          },
+          {
+            "id": "R4",
+            "name": "因果推断：相关vs因果",
+            "score": 75,
+            "time": 31.1,
+            "tokens": 2499,
+            "response_length": 1541
+          },
+          {
+            "id": "R5",
+            "name": "归纳推理：模式识别",
+            "score": 60,
+            "time": 31.0,
+            "tokens": 2499,
+            "response_length": 550
+          },
+          {
+            "id": "R6",
+            "name": "伦理判断：电车难题变体",
+            "score": 50,
+            "time": 30.9,
+            "tokens": 2499,
+            "response_length": 450
+          },
+          {
+            "id": "R7",
+            "name": "创造性思维：创新解决方案",
+            "score": 70,
+            "time": 31.0,
+            "tokens": 2499,
+            "response_length": 8242
+          },
+          {
+            "id": "R8",
+            "name": "元认知：思维过程分析",
+            "score": 70,
+            "time": 31.1,
+            "tokens": 2499,
+            "response_length": 1231
+          }
+        ]
+      },
+      "performance": {
+        "score": 88.0,
+        "details": [
+          {
+            "name": "首Token延迟",
+            "score": 80,
+            "latency_ms": 836.0
+          },
+          {
+            "name": "吞吐量",
+            "score": 100,
+            "tokens_per_sec": 76.4
+          },
+          {
+            "name": "响应速度",
+            "score": 60,
+            "latency_ms": 771.0
+          },
+          {
+            "name": "4线程并发",
+            "score": 100,
+            "total_time": 1.4,
+            "success": 4
+          },
+          {
+            "name": "8线程并发",
+            "score": 100,
+            "total_time": 2.4,
+            "success": 8
+          }
+        ]
+      }
+    },
+    "total_score": 79.6
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-claude-4.6-opus-reasoning-distilled",
+    "eval_time": "2026-05-26T23:58:27.639603",
+    "categories": {
+      "coding": {
+        "score": 99.375
+      },
+      "agent": {
+        "score": 81.875
+      },
+      "reasoning": {
+        "score": 77.5
+      },
+      "performance": {
+        "score": 88.0
+      }
+    },
+    "total_score": 87.0
+  },
+  {
+    "model_id": "qwopus-moe-35b-a3b",
+    "eval_time": "2026-05-27T00:08:52.753852",
+    "categories": {
+      "coding": {
+        "score": 100.0
+      },
+      "agent": {
+        "score": 78.125
+      },
+      "reasoning": {
+        "score": 80.625
+      },
+      "performance": {
+        "score": 88.0
+      }
+    },
+    "total_score": 86.8
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2-mtp",
+    "eval_time": "2026-05-27T01:40:54.162922",
+    "categories": {
+      "coding": {
+        "score": 85.625
+      },
+      "agent": {
+        "score": 68.125
+      },
+      "reasoning": {
+        "score": 80.625
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 77.1
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2-mlx",
+    "eval_time": "2026-05-27T03:07:23.503262",
+    "categories": {
+      "coding": {
+        "score": 92.5
+      },
+      "agent": {
+        "score": 59.375
+      },
+      "reasoning": {
+        "score": 76.25
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 75.4
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2",
+    "eval_time": "2026-05-27T04:06:47.629215",
+    "categories": {
+      "coding": {
+        "score": 85.0
+      },
+      "agent": {
+        "score": 68.125
+      },
+      "reasoning": {
+        "score": 80.625
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 76.9
+  },
+  {
+    "model_id": "froggeric/qwen3.6-27b-mtp",
+    "eval_time": "2026-05-27T04:48:51.273674",
+    "categories": {
+      "coding": {
+        "score": 75.625
+      },
+      "agent": {
+        "score": 63.75
+      },
+      "reasoning": {
+        "score": 65.0
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 68.9
+  },
+  {
+    "model_id": "qwen3.6-27b-mlx-vl-oq8",
+    "eval_time": "2026-05-27T05:45:12.209361",
+    "categories": {
+      "coding": {
+        "score": 72.5
+      },
+      "agent": {
+        "score": 67.5
+      },
+      "reasoning": {
+        "score": 64.375
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 68.9
+  },
+  {
+    "model_id": "qwen3.6-27b-mlx-oq4",
+    "eval_time": "2026-05-27T06:19:49.558408",
+    "categories": {
+      "coding": {
+        "score": 78.75
+      },
+      "agent": {
+        "score": 63.125
+      },
+      "reasoning": {
+        "score": 65.0
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 69.6
+  },
+  {
+    "model_id": "qwen3.6-27b-nvfp4",
+    "eval_time": "2026-05-27T06:51:37.677423",
+    "categories": {
+      "coding": {
+        "score": 62.5
+      },
+      "agent": {
+        "score": 64.375
+      },
+      "reasoning": {
+        "score": 68.125
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 65.9
+  },
+  {
+    "model_id": "qwen/qwen3.6-27b",
+    "eval_time": "2026-05-27T08:25:19.054651",
+    "categories": {
+      "coding": {
+        "score": 83.75
+      },
+      "agent": {
+        "score": 63.125
+      },
+      "reasoning": {
+        "score": 65.625
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 71.3
+  },
+  {
+    "model_id": "unsloth/qwen3.6-27b-mtp",
+    "eval_time": "2026-05-27T09:07:20.376966",
+    "categories": {
+      "coding": {
+        "score": 73.125
+      },
+      "agent": {
+        "score": 64.375
+      },
+      "reasoning": {
+        "score": 65.0
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 68.3
+  },
+  {
+    "model_id": "deepsweet/qwen3.6-27b-mlx-oq8",
+    "eval_time": "2026-05-27T11:54:02.674609",
+    "categories": {
+      "coding": {
+        "score": 73.125
+      },
+      "agent": {
+        "score": 65.0
+      },
+      "reasoning": {
+        "score": 66.25
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 68.8
+  },
+  {
+    "model_id": "bearzi/qwen3.6-27b-oq8@8bit",
+    "eval_time": "2026-05-27T14:18:31.477546",
+    "categories": {
+      "coding": {
+        "score": 65.0
+      },
+      "agent": {
+        "score": 66.875
+      },
+      "reasoning": {
+        "score": 67.5
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 67.2
+  },
+  {
+    "model_id": "zesming/qwen3.6-27b-oq8@8bit",
+    "eval_time": "2026-05-27T15:27:02.747306",
+    "categories": {
+      "coding": {
+        "score": 65.0
+      },
+      "agent": {
+        "score": 56.875
+      },
+      "reasoning": {
+        "score": 61.25
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 62.7
+  },
+  {
+    "model_id": "frogggias/qwen3.6-27b-mlx-oq8@8bit",
+    "eval_time": "2026-05-27T17:09:51.827755",
+    "categories": {
+      "coding": {
+        "score": 81.25
+      },
+      "agent": {
+        "score": 56.875
+      },
+      "reasoning": {
+        "score": 65.625
+      },
+      "performance": {
+        "score": 72.0
+      }
+    },
+    "total_score": 68.6
+  },
+  {
+    "model_id": "qwopus3.5-9b-coder",
+    "eval_time": "2026-05-27T17:37:40.050648",
+    "categories": {
+      "coding": {
+        "score": 85.0
+      },
+      "agent": {
+        "score": 63.125
+      },
+      "reasoning": {
+        "score": 70.0
+      },
+      "performance": {
+        "score": 76.0
+      }
+    },
+    "total_score": 73.3
+  },
+  {
+    "model_id": "nvidia/nemotron-3-nano-omni",
+    "eval_time": "2026-05-27T23:12:02.474604",
+    "categories": {
+      "coding": {
+        "score": 94.375
+      },
+      "agent": {
+        "score": 70.0
+      },
+      "reasoning": {
+        "score": 76.25
+      },
+      "performance": {
+        "score": 92.0
+      }
+    },
+    "total_score": 82.2
+  }
+]

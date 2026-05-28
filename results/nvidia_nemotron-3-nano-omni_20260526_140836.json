@@ -1,0 +1,164 @@
+{
+  "model_name": "nvidia/nemotron-3-nano-omni",
+  "model_id": "nvidia/nemotron-3-nano-omni",
+  "eval_time": "2026-05-26 14:02:31",
+  "overall_score": 84.85,
+  "dimensions": {
+    "coding": {
+      "score": 90.0,
+      "weight": 0.25,
+      "categories": {
+        "代码能力": {
+          "score": 90,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "并发安全LRU缓存",
+              "score": 25,
+              "max_score": 25,
+              "syntax_ok": true
+            },
+            {
+              "test": "表达式解析器",
+              "score": 25,
+              "max_score": 25,
+              "syntax_ok": true
+            },
+            {
+              "test": "异步任务调度器",
+              "score": 15,
+              "max_score": 25,
+              "syntax_ok": false
+            },
+            {
+              "test": "SQL解析与验证",
+              "score": 25,
+              "max_score": 25,
+              "syntax_ok": true
+            }
+          ]
+        }
+      }
+    },
+    "agent": {
+      "score": 72.0,
+      "weight": 0.25,
+      "categories": {
+        "Agent能力": {
+          "score": 72,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "多工具组合调用",
+              "score": 11,
+              "max_score": 25
+            },
+            {
+              "test": "工具参数推断",
+              "score": 11,
+              "max_score": 25
+            },
+            {
+              "test": "错误处理与重试",
+              "score": 25,
+              "max_score": 25
+            },
+            {
+              "test": "多轮对话工具链",
+              "score": 25,
+              "max_score": 25
+            }
+          ]
+        }
+      }
+    },
+    "reasoning": {
+      "score": 100.0,
+      "weight": 0.25,
+      "categories": {
+        "通用推理": {
+          "score": 100.0,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "复杂逻辑推理",
+              "score": 25.0,
+              "max_score": 25,
+              "content_length": 5993
+            },
+            {
+              "test": "数学建模与优化",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 1974
+            },
+            {
+              "test": "复杂阅读理解",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 1026
+            },
+            {
+              "test": "深度知识问答",
+              "score": 25,
+              "max_score": 25,
+              "content_length": 2681
+            }
+          ]
+        }
+      }
+    },
+    "performance": {
+      "score": 75.0,
+      "weight": 0.25,
+      "categories": {
+        "性能基准": {
+          "score": 75,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "首Token延迟",
+              "score": 5,
+              "max_score": 20,
+              "metrics": {
+                "avg_ttft_ms": 6667.73
+              }
+            },
+            {
+              "test": "吞吐量",
+              "score": 20,
+              "max_score": 20,
+              "metrics": {
+                "avg_tps": 77.92
+              }
+            },
+            {
+              "test": "响应速度",
+              "score": 10,
+              "max_score": 10,
+              "metrics": {
+                "latency_ms": 909.87
+              }
+            },
+            {
+              "test": "4线程并发",
+              "score": 40,
+              "max_score": 50,
+              "metrics": {
+                "success_count": 4,
+                "avg_latency_ms": 7989.63,
+                "total_time_ms": 8009.37,
+                "total_tokens": 1024
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}

@@ -1,0 +1,482 @@
+[
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1-oq8-mtp",
+    "eval_time": "2026-05-26T15:45:38.339394",
+    "scores": {
+      "coding": 0,
+      "agent": 0,
+      "reasoning": 0,
+      "performance": 0
+    },
+    "details": {},
+    "total_score": 0.0
+  },
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1-mtp",
+    "eval_time": "2026-05-26T15:46:14.582129",
+    "scores": {
+      "coding": 0,
+      "agent": 0,
+      "reasoning": 0,
+      "performance": 0
+    },
+    "details": {},
+    "total_score": 0.0
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mtp",
+    "eval_time": "2026-05-26T15:46:54.482936",
+    "scores": {
+      "coding": 0,
+      "agent": 0,
+      "reasoning": 0,
+      "performance": 20
+    },
+    "details": {
+      "latency_ms": 9308.0
+    },
+    "total_score": 3.0
+  },
+  {
+    "model_id": "unsloth/qwen3.6-35b-a3b-mtp",
+    "eval_time": "2026-05-26T15:47:33.006060",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 80
+    },
+    "details": {
+      "coding_time": 23.37,
+      "agent_time": 8.9,
+      "reasoning_time": 8.18,
+      "latency_ms": 857.0
+    },
+    "total_score": 90.8
+  },
+  {
+    "model_id": "havenoammo/qwen3.6-35b-a3b-mtp",
+    "eval_time": "2026-05-26T15:48:23.319074",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 35.98,
+      "agent_time": 4.76,
+      "reasoning_time": 9.38,
+      "latency_ms": 1155.0
+    },
+    "total_score": 87.8
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-vmlx-mxfp8",
+    "eval_time": "2026-05-26T15:49:23.610889",
+    "scores": {
+      "coding": 50,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 29.82,
+      "agent_time": 2.86,
+      "reasoning_time": 10.33,
+      "latency_ms": 1208.0
+    },
+    "total_score": 72.8
+  },
+  {
+    "model_id": "huihui-qwen3.6-35b-a3b-claude-4.7-opus-abliterated-mlx",
+    "eval_time": "2026-05-26T15:50:16.826673",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 30.94,
+      "agent_time": 2.9,
+      "reasoning_time": 11.15,
+      "latency_ms": 1132.0
+    },
+    "total_score": 87.8
+  },
+  {
+    "model_id": "qwopus3.6-35b-a3b-v1",
+    "eval_time": "2026-05-26T15:51:11.954618",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 100,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 34.08,
+      "agent_time": 7.19,
+      "reasoning_time": 11.09,
+      "latency_ms": 1119.0
+    },
+    "total_score": 94.0
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-mlx-oq8",
+    "eval_time": "2026-05-26T15:52:14.447368",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 30.97,
+      "agent_time": 5.59,
+      "reasoning_time": 11.53,
+      "latency_ms": 1329.0
+    },
+    "total_score": 87.8
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-nvfp4",
+    "eval_time": "2026-05-26T15:53:12.869784",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 80
+    },
+    "details": {
+      "coding_time": 23.39,
+      "agent_time": 8.11,
+      "reasoning_time": 8.14,
+      "latency_ms": 861.0
+    },
+    "total_score": 90.8
+  },
+  {
+    "model_id": "qwen/qwen3.6-35b-a3b",
+    "eval_time": "2026-05-26T15:54:02.388470",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 38.33,
+      "agent_time": 6.21,
+      "reasoning_time": 10.93,
+      "latency_ms": 1176.0
+    },
+    "total_score": 87.8
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-oq8",
+    "eval_time": "2026-05-26T15:55:08.045737",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 28.63,
+      "agent_time": 10.47,
+      "reasoning_time": 10.42,
+      "latency_ms": 1191.0
+    },
+    "total_score": 87.8
+  },
+  {
+    "model_id": "qwen3.6-35b-a3b-claude-4.6-opus-reasoning-distilled",
+    "eval_time": "2026-05-26T15:56:07.771155",
+    "scores": {
+      "coding": 65,
+      "agent": 100,
+      "reasoning": 100,
+      "performance": 60
+    },
+    "details": {
+      "coding_time": 16.53,
+      "agent_time": 11.09,
+      "reasoning_time": 11.08,
+      "latency_ms": 1112.0
+    },
+    "total_score": 83.5
+  },
+  {
+    "model_id": "qwopus-moe-35b-a3b",
+    "eval_time": "2026-05-26T15:56:56.592367",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 50,
+      "performance": 80
+    },
+    "details": {
+      "coding_time": 24.37,
+      "agent_time": 9.05,
+      "reasoning_time": 8.98,
+      "latency_ms": 875.0
+    },
+    "total_score": 84.5
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2-mtp",
+    "eval_time": "2026-05-26T15:57:48.867937",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 100,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 81.96,
+      "agent_time": 33.22,
+      "reasoning_time": 33.59,
+      "latency_ms": 3006.0
+    },
+    "total_score": 91.0
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2-mlx",
+    "eval_time": "2026-05-26T16:00:29.661020",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 100,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 103.84,
+      "agent_time": 40.91,
+      "reasoning_time": 50.67,
+      "latency_ms": 3474.0
+    },
+    "total_score": 91.0
+  },
+  {
+    "model_id": "qwopus3.6-27b-v2",
+    "eval_time": "2026-05-26T16:03:57.568176",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 100,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 105.97,
+      "agent_time": 49.42,
+      "reasoning_time": 51.0,
+      "latency_ms": 3800.0
+    },
+    "total_score": 91.0
+  },
+  {
+    "model_id": "froggeric/qwen3.6-27b-mtp",
+    "eval_time": "2026-05-26T16:07:36.776288",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 78.73,
+      "agent_time": 34.37,
+      "reasoning_time": 33.8,
+      "latency_ms": 2691.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "qwen3.6-27b-mlx-vl-oq8",
+    "eval_time": "2026-05-26T16:10:15.374061",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 98.99,
+      "agent_time": 48.43,
+      "reasoning_time": 48.36,
+      "latency_ms": 3554.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "qwen3.6-27b-mlx-oq4",
+    "eval_time": "2026-05-26T16:13:43.713802",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 63.14,
+      "agent_time": 30.29,
+      "reasoning_time": 30.46,
+      "latency_ms": 2382.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "qwen3.6-27b-nvfp4",
+    "eval_time": "2026-05-26T16:15:58.994369",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 60.29,
+      "agent_time": 27.98,
+      "reasoning_time": 27.74,
+      "latency_ms": 2116.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "qwen/qwen3.6-27b",
+    "eval_time": "2026-05-26T16:18:06.131338",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 108.29,
+      "agent_time": 50.69,
+      "reasoning_time": 50.66,
+      "latency_ms": 3832.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "unsloth/qwen3.6-27b-mtp",
+    "eval_time": "2026-05-26T16:21:48.603491",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 66.22,
+      "agent_time": 32.8,
+      "reasoning_time": 32.0,
+      "latency_ms": 2524.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "deepsweet/qwen3.6-27b-mlx-oq8",
+    "eval_time": "2026-05-26T16:24:11.158215",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 102.15,
+      "agent_time": 50.41,
+      "reasoning_time": 50.71,
+      "latency_ms": 3789.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "bearzi/qwen3.6-27b-oq8@8bit",
+    "eval_time": "2026-05-26T16:27:47.228265",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 98.63,
+      "agent_time": 48.36,
+      "reasoning_time": 48.26,
+      "latency_ms": 3502.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "zesming/qwen3.6-27b-oq8@8bit",
+    "eval_time": "2026-05-26T16:31:14.991945",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 98.68,
+      "agent_time": 48.35,
+      "reasoning_time": 48.31,
+      "latency_ms": 3512.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "frogggias/qwen3.6-27b-mlx-oq8@8bit",
+    "eval_time": "2026-05-26T16:34:42.849308",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 103.14,
+      "agent_time": 50.45,
+      "reasoning_time": 50.75,
+      "latency_ms": 3790.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "qwopus3.5-9b-coder",
+    "eval_time": "2026-05-26T16:38:19.993609",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 40
+    },
+    "details": {
+      "coding_time": 59.79,
+      "agent_time": 16.48,
+      "reasoning_time": 28.18,
+      "latency_ms": 2062.0
+    },
+    "total_score": 84.8
+  },
+  {
+    "model_id": "nvidia/nemotron-3-nano-omni",
+    "eval_time": "2026-05-26T16:40:15.519674",
+    "scores": {
+      "coding": 100,
+      "agent": 100,
+      "reasoning": 75,
+      "performance": 80
+    },
+    "details": {
+      "coding_time": 31.75,
+      "agent_time": 8.33,
+      "reasoning_time": 9.89,
+      "latency_ms": 817.0
+    },
+    "total_score": 90.8
+  }
+]

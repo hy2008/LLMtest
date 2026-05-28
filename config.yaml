@@ -1,0 +1,49 @@
+# LM Studio 模型评估套件 配置文件
+
+# LM Studio API 配置
+api:
+  base_url: "http://localhost:1234/v1"
+  # 可选: 如果设置了 API key
+  api_key: "lm-studio"
+  # 请求超时(秒)
+  timeout: 120
+  # 连接重试次数
+  max_retries: 3
+
+# 评估配置
+evaluation:
+  # 每个维度的测试题目数量 (实际数量可能因分类而异)
+  samples_per_category: 3
+  # 温度设置 (0 = 确定性输出, 适合评估)
+  temperature: 0.0
+  # 最大生成 token 数
+  max_tokens: 2048
+  # 并发请求数 (性能测试时使用)
+  concurrency: 1
+
+# 性能基准测试配置
+benchmark:
+  # 首token延迟测试提示词
+  ttft_prompt: "请解释什么是机器学习。"
+  # 吞吐量测试提示词
+  throughput_prompt: "请写一篇关于人工智能发展历史的详细文章，至少800字。"
+  # 吞吐量测试重复次数
+  throughput_runs: 3
+  # 并发测试并发数
+  concurrent_requests: 5
+
+# 报告配置
+report:
+  # 报告输出目录
+  output_dir: "reports"
+  # 结果存储目录
+  results_dir: "results"
+  # HTML 报告模板
+  template: "report_template.html"
+
+# 评估维度权重 (用于综合评分)
+weights:
+  coding: 0.30
+  agent: 0.30
+  reasoning: 0.25
+  performance: 0.15

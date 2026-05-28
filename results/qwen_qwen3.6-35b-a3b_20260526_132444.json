@@ -1,0 +1,91 @@
+{
+  "model_name": "qwen/qwen3.6-35b-a3b",
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "eval_time": "2026-05-26 13:18:53",
+  "overall_score": 65.5,
+  "dimensions": {
+    "coding": {
+      "score": 31.0,
+      "weight": 0.5,
+      "categories": {
+        "代码能力(增强)": {
+          "score": 31,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "并发安全LRU缓存",
+              "score": 15,
+              "max_score": 25,
+              "syntax_ok": false,
+              "code_length": 1606
+            },
+            {
+              "test": "表达式解析器",
+              "score": 0,
+              "max_score": 25,
+              "syntax_ok": false,
+              "code_length": 137
+            },
+            {
+              "test": "异步任务调度器",
+              "score": 8,
+              "max_score": 25,
+              "syntax_ok": true,
+              "code_length": 523
+            },
+            {
+              "test": "SQL解析与验证",
+              "score": 8,
+              "max_score": 25,
+              "syntax_ok": true,
+              "code_length": 247
+            }
+          ]
+        }
+      }
+    },
+    "agent": {
+      "score": 100.0,
+      "weight": 0.5,
+      "categories": {
+        "Agent能力(增强)": {
+          "score": 100,
+          "max_score": 100,
+          "weight": 1.0,
+          "details": [
+            {
+              "test": "多工具组合调用",
+              "score": 25,
+              "max_score": 25,
+              "has_json": true,
+              "has_reasoning": true
+            },
+            {
+              "test": "工具参数推断",
+              "score": 25,
+              "max_score": 25,
+              "has_json": true,
+              "has_reasoning": true
+            },
+            {
+              "test": "错误处理与重试",
+              "score": 25,
+              "max_score": 25,
+              "has_json": true,
+              "has_reasoning": true
+            },
+            {
+              "test": "多轮对话工具链",
+              "score": 25,
+              "max_score": 25,
+              "has_json": true,
+              "has_reasoning": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "metadata": {}
+}
