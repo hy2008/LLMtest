@@ -1,49 +1,174 @@
 # LM Studio 模型评估套件 配置文件
+# 硬件适配: Mac Studio M4 Max 128GB
 
 # LM Studio API 配置
 api:
-  base_url: "http://localhost:1234/v1"
-  # 可选: 如果设置了 API key
-  api_key: "lm-studio"
-  # 请求超时(秒)
-  timeout: 120
-  # 连接重试次数
+  base_url: "http://localhost:10240/v1"
+  api_key: "sk-lm-kkZxEu1e:YagcQehqsGQGNQD0cyIH"
+  # 本地模型生成速度较慢, 尤其 QWEN3.5/3.6-27B 等中小模型
+  # reasoning-distilled 模型需要更长的思考时间
+  # total: 单次请求总超时 (含等待首token + 生成)
+  # sock_read: 流式读取超时 (两个chunk之间最大间隔, 慢速模型需要放宽)
+  timeout: 900
+  sock_read_timeout: 300
   max_retries: 3
 
 # 评估配置
 evaluation:
-  # 每个维度的测试题目数量 (实际数量可能因分类而异)
   samples_per_category: 3
-  # 温度设置 (0 = 确定性输出, 适合评估)
   temperature: 0.0
-  # 最大生成 token 数
-  max_tokens: 2048
-  # 并发请求数 (性能测试时使用)
-  concurrency: 1
+  # M4 Max 128GB 可支撑更长输出, 提升到 4096
+  max_tokens: 4096
+  # M4 Max 支持 4 并发 (LM Studio 默认), 评估也可并发
+  concurrency: 4
 
-# 性能基准测试配置
+# 性能基准测试配置 (M4 Max 优化)
 benchmark:
-  # 首token延迟测试提示词
   ttft_prompt: "请解释什么是机器学习。"
-  # 吞吐量测试提示词
   throughput_prompt: "请写一篇关于人工智能发展历史的详细文章，至少800字。"
-  # 吞吐量测试重复次数
+  # M4 Max 吞吐量稳定, 3次足够
   throughput_runs: 3
-  # 并发测试并发数
-  concurrent_requests: 5
+  # LM Studio 默认 4 并发, 测试时匹配
+  concurrent_requests: 4
 
 # 报告配置
 report:
-  # 报告输出目录
   output_dir: "reports"
-  # 结果存储目录
   results_dir: "results"
-  # HTML 报告模板
   template: "report_template.html"
 
-# 评估维度权重 (用于综合评分)
+# 评估维度权重 (OpenClaw/Hermes 场景优化)
+# OpenClaw: 代码+Agent 权重更高 (实际开发工作流)
+# Hermes: Agent 编排+推理 权重更高 (复杂任务规划)
+# 综合权重取平衡值
 weights:
-  coding: 0.30
-  agent: 0.30
-  reasoning: 0.25
-  performance: 0.15
+  coding: 0.25
+  agent: 0.25
+  reasoning: 0.20
+  performance: 0.12
+  rag: 0.18
+
+# 硬件感知配置 (Mac Studio M4 Max 128GB)
+hardware:
+  platform: "mac_studio_m4_max"
+  memory_gb: 128
+  # MLX 框架下 M4 Max 的推理特性
+  mlx:
+    # LM Studio 默认并发数
+    max_concurrency: 4
+    # Apple Silicon 统一内存, 128GB 可同时加载多个中小模型
+    max_model_size_gb: 40
+    # M4 Max GPU 核心数
+    gpu_cores: 40
+
+# 应用场景配置
+application:
+  # OpenClaw: 代码生成+工具调用为主
+  openclaw:
+    prompt_style: "code_first"
+    suppress_reasoning: true
+    max_tokens_code: 4096
+    max_tokens_agent: 2048
+  # Hermes: 复杂规划+推理为主
+  hermes:
+    prompt_style: "reasoning_allowed"
+    suppress_reasoning: false
+    max_tokens_code: 4096
+    max_tokens_agent: 4096
+
+# 子类别权重 (单一真源 — 取代评估器中的硬编码权重)
+category_weights:
+  coding:
+    code_writing: 0.40
+    code_completion: 0.15
+    debugging: 0.15
+    multilingual: 0.10
+    code_review: 0.08
+    test_writing: 0.07
+    api_development: 0.05
+  agent:
+    function_calling: 0.15
+    tool_selection: 0.12
+    multi_step_reasoning: 0.12
+    instruction_following: 0.08
+    browser_automation: 0.06
+    filesystem_operations: 0.05
+    shell_execution: 0.05
+    tool_orchestration: 0.18
+    multi_turn_conversation: 0.05
+    structured_output: 0.04
+    long_task_planning: 0.10
+  reasoning:
+    logic: 0.15
+    knowledge_understanding: 0.23
+    math: 0.10
+    chain_of_thought: 0.10
+    business_reasoning: 0.10
+    code_reasoning: 0.08
+    self_correction: 0.06
+    multi_step_decision: 0.10
+    causal_reasoning: 0.08
+  performance:
+    ttft: 0.40
+    throughput: 0.35
+    concurrent: 0.25
+
+  rag:
+    retrieval_accuracy: 0.35
+    generation_quality: 0.35
+    hallucination_free: 0.30
+
+# 评估目标框架 Profile — OpenClaw vs Hermes 差异化
+profiles:
+  openclaw:
+    description: "面向 OpenClaw 代码代理框架的评估模式"
+    prompt_style: "code_first"
+    suppress_reasoning: true
+    max_tokens_code: 4096
+    max_tokens_agent: 2048
+    weights:
+      coding: 0.30
+      agent: 0.30
+      reasoning: 0.15
+      performance: 0.10
+      rag: 0.15
+  hermes:
+    description: "面向 Hermes 推理框架的评估模式"
+    prompt_style: "reasoning_allowed"
+    suppress_reasoning: false
+    max_tokens_code: 4096
+    max_tokens_agent: 4096
+    weights:
+      coding: 0.15
+      agent: 0.25
+      reasoning: 0.30
+      performance: 0.10
+      rag: 0.20
+  default:
+    description: "通用评估模式（兼容旧版）"
+    prompt_style: "code_first"
+    suppress_reasoning: false
+    weights:
+      coding: 0.25
+      agent: 0.25
+      reasoning: 0.20
+      performance: 0.12
+      rag: 0.18
+
+# 评估模式 — quick/standard/full
+eval_modes:
+  quick:
+    description: "快速筛选(5-8分钟)"
+    samples_per_category: 1
+    dimensions: ["coding", "agent", "reasoning", "performance"]
+    temperature: 0.0
+  standard:
+    description: "标准评估(15-20分钟)"
+    samples_per_category: 3
+    dimensions: ["coding", "agent", "reasoning", "performance", "rag"]
+    temperature: 0.0
+  full:
+    description: "全量评估(~30分钟)"
+    samples_per_category: -1
+    dimensions: ["coding", "agent", "reasoning", "performance", "rag"]
+    temperature: 0.0

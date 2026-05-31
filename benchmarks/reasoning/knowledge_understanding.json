@@ -1,0 +1,27 @@
+{
+  "category": "knowledge_understanding",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "ku_001",
+      "name": "计算机科学概念理解",
+      "prompt": "请解释以下概念的区别和联系：\n1. 进程（Process）和线程（Thread）\n2. 同步（Synchronous）和异步（Asynchronous）\n3. 栈（Stack）和堆（Heap）\n请用简洁的语言说明，并举例说明各自的应用场景。",
+      "max_score": 20,
+      "criteria": {"accuracy": 8, "clarity": 5, "examples_provided": 4, "completeness": 3}
+    },
+    {
+      "id": "ku_002",
+      "name": "历史事件理解",
+      "prompt": "请简述工业革命对现代社会的影响，包括：\n1. 技术层面的影响\n2. 社会结构的变化\n3. 经济模式的转变\n4. 对环境的影响\n每个方面至少给出两个具体例子。",
+      "max_score": 20,
+      "criteria": {"historical_accuracy": 6, "breadth": 5, "specific_examples": 5, "organization": 4}
+    },
+    {
+      "id": "ku_003",
+      "name": "经济学概念应用",
+      "prompt": "请用供需原理解释以下现象：\n1. 为什么演唱会门票黄牛价远高于票面价？\n2. 为什么农产品丰收年份农民收入反而可能下降？\n3. 为什么奢侈品降价反而会降低销量？\n每个现象用 2-3 句话解释。",
+      "max_score": 20,
+      "criteria": {"theory_application": 9, "explanation_quality": 6, "conciseness": 5}
+    }
+  ]
+}

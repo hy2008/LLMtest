@@ -1,0 +1,30 @@
+{
+  "category": "javascript",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "js_001",
+      "name": "Promise 异步流程控制",
+      "prompt": "请用 JavaScript 实现一个并发控制函数 concurrentExecute(tasks, limit)，要求：\n1. tasks 是一个返回 Promise 的函数数组\n2. limit 是最大并发数\n3. 按顺序执行所有任务，但同时最多只有 limit 个在运行\n4. 返回所有结果的数组\n5. 包含 TypeScript 类型定义",
+      "language": "javascript",
+      "max_score": 25,
+      "criteria": {"concurrency_controlled": 10, "results_ordered": 5, "error_handling": 5, "type_definitions": 5}
+    },
+    {
+      "id": "js_002",
+      "name": "深拷贝实现",
+      "prompt": "请用 JavaScript 实现一个深拷贝函数 deepClone(obj)，要求：\n1. 支持嵌套对象和数组\n2. 处理循环引用\n3. 支持 Date、RegExp、Map、Set 等内置类型\n4. 不能使用 JSON.parse(JSON.stringify())\n5. 包含单元测试示例",
+      "language": "javascript",
+      "max_score": 25,
+      "criteria": {"deep_clone_correct": 10, "circular_reference": 8, "built_in_types": 5, "test_example": 2}
+    },
+    {
+      "id": "js_003",
+      "name": "EventEmitter 实现",
+      "prompt": "请用 JavaScript 实现一个简单的 EventEmitter 类，要求：\n1. on(event, callback) - 注册事件监听\n2. off(event, callback) - 移除事件监听\n3. emit(event, ...args) - 触发事件\n4. once(event, callback) - 只触发一次的监听\n5. 支持链式调用",
+      "language": "javascript",
+      "max_score": 25,
+      "criteria": {"core_methods": 10, "once_implementation": 5, "off_implementation": 5, "chainable": 5}
+    }
+  ]
+}

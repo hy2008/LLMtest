@@ -1,0 +1,27 @@
+{
+  "category": "function_calling",
+  "dimension": "agent",
+  "cases": [
+    {
+      "id": "fc_001",
+      "name": "天气查询函数调用",
+      "prompt": "用户提问：'北京明天天气怎么样？'\n可用工具: get_weather(city: str, date: str) -> WeatherInfo\n请生成正确的函数调用，包括工具名称和参数。",
+      "max_score": 15,
+      "criteria": {"tool_name_correct": 5, "parameters_correct": 7, "format_valid": 3}
+    },
+    {
+      "id": "fc_002",
+      "name": "多参数函数调用",
+      "prompt": "用户请求：'帮我预订明天从上海到北京的经济舱机票，预算2000元以内'\n可用工具: book_flight(origin: str, destination: str, date: str, cabin_class: str, max_price: float) -> BookingResult\n请生成正确的函数调用。",
+      "max_score": 15,
+      "criteria": {"all_parameters_extracted": 8, "parameter_types_correct": 4, "format_valid": 3}
+    },
+    {
+      "id": "fc_003",
+      "name": "函数调用结果处理",
+      "prompt": "工具 get_stock_price(symbol='AAPL') 返回: {'price': 178.52, 'currency': 'USD', 'change': -2.3, 'change_percent': -1.27}\n用户之前问的是'苹果股票今天表现如何？'\n请根据工具返回结果生成自然语言回复。",
+      "max_score": 15,
+      "criteria": {"data_accuracy": 5, "natural_language": 5, "context_relevance": 5}
+    }
+  ]
+}

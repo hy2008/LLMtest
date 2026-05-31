@@ -1,0 +1,14 @@
+{
+  "category": "ttft",
+  "dimension": "performance",
+  "cases": [
+    {
+      "id": "ttft_001",
+      "name": "首字延迟基准测试",
+      "prompt": "请解释什么是Transformer架构中的自注意力机制（Self-Attention），并说明它在自然语言处理中的作用。请详细阐述其计算过程、时间复杂度以及相对于传统RNN架构的优势。",
+      "metric": "time_to_first_token_ms",
+      "max_score": 10,
+      "criteria": {"ttft_under_500ms": 4, "ttft_under_1000ms": 3, "ttft_under_3000ms": 2, "ttft_above_3000ms": 1}
+    }
+  ]
+}

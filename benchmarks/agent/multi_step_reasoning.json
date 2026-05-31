@@ -1,0 +1,20 @@
+{
+  "category": "multi_step_reasoning",
+  "dimension": "agent",
+  "cases": [
+    {
+      "id": "msr_001",
+      "name": "旅行规划多步推理",
+      "prompt": "用户请求：'我下周五从深圳出发去成都玩3天，预算5000元，帮我规划行程'\n可用工具：\n1. search_flights(origin, destination, date) -> FlightInfo\n2. search_hotels(city, check_in, check_out, budget) -> HotelList\n3. search_attractions(city) -> AttractionList\n4. get_weather(city, date) -> WeatherInfo\n请规划工具调用步骤，并说明每一步的目的。",
+      "max_score": 20,
+      "criteria": {"steps_complete": 8, "tool_usage_correct": 6, "logic_flow": 4, "budget_awareness": 2}
+    },
+    {
+      "id": "msr_002",
+      "name": "数据分析多步推理",
+      "prompt": "用户请求：'分析公司上季度销售数据，找出top 3产品并对比去年同期'\n可用工具：\n1. query_database(sql: str) -> ResultSet\n2. generate_chart(data, chart_type) -> ImageURL\n3. calculate_metrics(data, metric_type) -> MetricsResult\n4. write_report(content: str) -> ReportURL\n请设计执行流程，说明每一步的数据输入和输出。",
+      "max_score": 20,
+      "criteria": {"pipeline_design": 8, "data_flow_correct": 6, "tool_selection": 4, "output_quality": 2}
+    }
+  ]
+}

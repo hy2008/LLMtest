@@ -5,8 +5,11 @@
 
 import json
 import os
+import re
+import tempfile
+import subprocess
 from datetime import datetime
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 from dataclasses import dataclass, field, asdict
 
 
@@ -97,11 +100,14 @@ class ScoreEngine:
 
     def add_dimension_score(self, result: ModelEvalResult,
                             dimension: str, categories: List[CategoryScore]):
-        """添加维度评分"""
+        """添加维度评分 — 归一化聚合: (score/max_score×100)×weight"""
         dim_weight = self.weights.get(dimension, 1.0)
-        # 计算维度加权平均分
+        # 归一化: 每子类别先转为百分比, 再加权平均
         total_weight = sum(c.weight for c in categories)
-        weighted_sum = sum(c.score * c.weight for c in categories)
+        weighted_sum = sum(
+            (c.score / c.max_score * 100 if c.max_score > 0 else 0) * c.weight
+            for c in categories
+        )
         dim_score = weighted_sum / total_weight if total_weight > 0 else 0
 
         dim = DimensionScore(
@@ -161,6 +167,9 @@ class ScoreEngine:
             try:
                 with open(filepath, "r", encoding="utf-8") as f:
                     data = json.load(f)
+                # 跳过列表格式的汇总文件 (eval_summary_*.json)
+                if isinstance(data, list):
+                    continue
                 # 重建 ModelEvalResult
                 result = ModelEvalResult(
                     model_name=data.get("model_name", ""),
@@ -171,14 +180,25 @@ class ScoreEngine:
                 )
                 for dim_name, dim_data in data.get("dimensions", {}).items():
                     categories = []
-                    for cat_name, cat_data in dim_data.get("categories", {}).items():
-                        categories.append(CategoryScore(
-                            category=cat_name,
-                            score=cat_data.get("score", 0),
-                            max_score=cat_data.get("max_score", 100),
-                            details=cat_data.get("details", []),
-                            weight=cat_data.get("weight", 1.0)
-                        ))
+                    cats = dim_data.get("categories", {})
+                    if isinstance(cats, dict):
+                        for cat_name, cat_data in cats.items():
+                            categories.append(CategoryScore(
+                                category=cat_name,
+                                score=cat_data.get("score", 0),
+                                max_score=cat_data.get("max_score", 100),
+                                details=cat_data.get("details", []),
+                                weight=cat_data.get("weight", 1.0)
+                            ))
+                    elif isinstance(cats, list):
+                        for cat_data in cats:
+                            categories.append(CategoryScore(
+                                category=cat_data.get("category", cat_data.get("name", "")),
+                                score=cat_data.get("score", 0),
+                                max_score=cat_data.get("max_score", 100),
+                                details=cat_data.get("details", []),
+                                weight=cat_data.get("weight", 1.0)
+                            ))
                     result.dimensions[dim_name] = DimensionScore(
                         dimension=dim_name,
                         score=dim_data.get("score", 0),
@@ -191,3 +211,177 @@ class ScoreEngine:
 
         self.results.extend(loaded)
         return loaded
+
+    @staticmethod
+    def reverse_validation(
+        response: str,
+        validation_type: str = "code",
+        test_cases: Optional[List[Dict[str, Any]]] = None,
+    ) -> Dict[str, Any]:
+        """反向验证：检验模型能否识别错误/拒绝无效输入。
+
+        Args:
+            response: 模型的原始响应文本
+            validation_type: "code"（代码执行验证）或 "logic"（反例检测）
+            test_cases: 可选的自定义测试用例列表
+
+        Returns:
+            dict: {
+                "passed": bool,
+                "score": float (0-100),
+                "details": list of validation detail dicts
+            }
+        """
+        if validation_type == "code":
+            return ScoreEngine._reverse_validate_code(response, test_cases)
+        elif validation_type == "logic":
+            return ScoreEngine._reverse_validate_logic(response, test_cases)
+        else:
+            return {"passed": False, "score": 0, "details": [{"error": f"未知验证类型: {validation_type}"}]}
+
+    @staticmethod
+    def _reverse_validate_code(response: str, test_cases: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+        """代码反向验证：提取模型建议的修复代码并实际执行，验证修复是否真正有效。"""
+        code_blocks = re.findall(r'```(?:python|py)?\s*\n(.*?)```', response, re.DOTALL)
+        if not code_blocks:
+            return {"passed": True, "score": 50, "details": [{"note": "未提取到可执行代码块，跳过执行验证"}]}
+
+        details = []
+        passed_count = 0
+        total = len(code_blocks)
+
+        for i, code in enumerate(code_blocks):
+            code = code.strip()
+            if not code or len(code) < 10:
+                details.append({"block": i + 1, "status": "skipped", "reason": "代码过短"})
+                passed_count += 1
+                continue
+
+            dangerous_patterns = [r'\bos\.system\b', r'\bsubprocess\.call\b', r'\brm\s+-rf',
+                                  r'\bshutil\.rmtree\b', r'\beval\s*\(', r'\bexec\s*\(',
+                                  r'\bopen\s*\(.+["\']w', r'\bsocket\b']
+            is_dangerous = any(re.search(p, code) for p in dangerous_patterns)
+            if is_dangerous:
+                details.append({"block": i + 1, "status": "rejected", "reason": "检测到危险操作模式"})
+                continue
+
+            with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=True, encoding='utf-8') as f:
+                f.write(code)
+                f.flush()
+                try:
+                    result = subprocess.run(
+                        ['python3', f.name],
+                        capture_output=True, text=True, timeout=5,
+                        env={**os.environ, 'PYTHONPATH': os.getcwd()}
+                    )
+                    if result.returncode == 0:
+                        details.append({"block": i + 1, "status": "passed", "returncode": 0})
+                        passed_count += 1
+                    else:
+                        details.append({
+                            "block": i + 1, "status": "failed",
+                            "returncode": result.returncode,
+                            "stderr": result.stderr[:200]
+                        })
+                except subprocess.TimeoutExpired:
+                    details.append({"block": i + 1, "status": "timeout"})
+                except Exception as e:
+                    details.append({"block": i + 1, "status": "error", "message": str(e)[:100]})
+
+        score = (passed_count / total * 100) if total > 0 else 0
+        return {"passed": passed_count == total, "score": score, "details": details}
+
+    @staticmethod
+    def _reverse_validate_logic(response: str, test_cases: Optional[List[Dict[str, Any]]] = None) -> Dict[str, Any]:
+        """逻辑反向验证：检查推理结论是否排除了明显反例，验证推理链完备性。"""
+        if test_cases is None:
+            test_cases = [
+                {"claim_pattern": r"所有\s*(\S+)\s*都", "counter_needed": True,
+                 "description": "全称命题需考虑反例"},
+                {"claim_pattern": r"一定|必然|肯定", "counter_needed": True,
+                 "description": "绝对化表述需考虑例外"},
+                {"claim_pattern": r"只要\s*.+\s*就", "counter_needed": True,
+                 "description": "充分条件需验证必要性"},
+            ]
+
+        details = []
+        passed_count = 0
+        total = len(test_cases)
+
+        for tc in test_cases:
+            pattern = tc.get("claim_pattern", "")
+            counter_needed = tc.get("counter_needed", False)
+            desc = tc.get("description", "")
+
+            has_absolute_claim = bool(re.search(pattern, response))
+            if not has_absolute_claim:
+                details.append({"test": desc, "status": "passed", "reason": "未发现绝对化表述"})
+                passed_count += 1
+                continue
+
+            counter_indicators = ["反例", "例外", "不一定", "可能不", "前提条件",
+                                  "counter.?example", "exception", "caveat",
+                                  "但在", "然而", "不过", "需要注意的是"]
+            has_counter = any(re.search(ind, response, re.IGNORECASE) for ind in counter_indicators)
+
+            if has_counter:
+                details.append({"test": desc, "status": "passed", "reason": "发现反例/限制条件讨论"})
+                passed_count += 1
+            else:
+                details.append({"test": desc, "status": "failed", "reason": "绝对化表述缺少反例讨论"})
+
+        score = (passed_count / total * 100) if total > 0 else 0
+        return {"passed": passed_count == total, "score": score, "details": details}
+
+    @staticmethod
+    def compute_stability(scores_temp0: Dict[str, float],
+                          scores_temp07: Dict[str, float],
+                          max_scores: Optional[Dict[str, float]] = None) -> Dict[str, Any]:
+        """计算多温度评估的稳定性指标。
+
+        Args:
+            scores_temp0: temperature=0 时各子类别得分 {category: score}
+            scores_temp07: temperature=0.7 时各子类别得分 {category: score}
+            max_scores: 各子类别满分 {category: max_score}，默认100
+
+        Returns:
+            dict: {
+                "categories": {category: {score_temp0, score_temp0.7, stability_index, variance}},
+                "overall_stability": float,
+                "stable_categories": int,
+                "unstable_categories": int
+            }
+        """
+        if max_scores is None:
+            max_scores = {k: 100 for k in scores_temp0}
+
+        categories_result = {}
+        stability_values = []
+
+        all_categories = set(scores_temp0.keys()) | set(scores_temp07.keys())
+        for cat in all_categories:
+            s0 = scores_temp0.get(cat, 0)
+            s07 = scores_temp07.get(cat, 0)
+            mx = max_scores.get(cat, 100)
+
+            variance = abs(s0 - s07)
+            stability_index = 1 - (variance / mx) if mx > 0 else 0
+            stability_values.append(stability_index)
+
+            categories_result[cat] = {
+                "score_temp0": s0,
+                "score_temp0.7": s07,
+                "stability_index": round(stability_index, 4),
+                "variance": round(variance, 2)
+            }
+
+        overall = sum(stability_values) / len(stability_values) if stability_values else 0
+        stable = sum(1 for v in stability_values if v >= 0.9)
+        unstable = sum(1 for v in stability_values if v < 0.7)
+
+        return {
+            "categories": categories_result,
+            "overall_stability": round(overall, 4),
+            "stable_categories": stable,
+            "unstable_categories": unstable
+        }

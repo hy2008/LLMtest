@@ -1,0 +1,14 @@
+{
+  "category": "throughput",
+  "dimension": "performance",
+  "cases": [
+    {
+      "id": "tp_001",
+      "name": "吞吐量基准测试",
+      "prompt": "请撰写一篇关于人工智能发展历程的详细综述文章，内容应涵盖：\n1. 人工智能的起源（1950s-1960s）\n2. 第一次AI寒冬及其原因\n3. 专家系统时代（1980s）\n4. 机器学习革命（1990s-2000s）\n5. 深度学习崛起（2010s至今）\n6. 大语言模型时代（2020s）\n7. 未来发展趋势\n请确保文章内容详实，逻辑清晰，不少于1500字。",
+      "metric": "tokens_per_second",
+      "max_score": 10,
+      "criteria": {"tps_above_50": 4, "tps_above_30": 3, "tps_above_15": 2, "tps_below_15": 1}
+    }
+  ]
+}

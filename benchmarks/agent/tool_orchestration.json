@@ -1,0 +1,20 @@
+{
+  "category": "tool_orchestration",
+  "dimension": "agent",
+  "cases": [
+    {
+      "id": "to_001",
+      "name": "错误恢复与重试编排",
+      "prompt": "用户请求：'查询上海未来一周天气并生成出行建议'\n可用工具：\n1. weather_api_primary(city, days) - 主天气API（可能超时）\n2. weather_api_backup(city, days) - 备用天气API\n3. generate_travel_advice(weather_data) - 生成建议\n4. notify_user(message) - 通知用户\n请设计工具编排流程，包含：\n- 正常执行路径\n- 主 API 超时时的降级策略\n- 所有 API 都失败时的用户通知方案",
+      "max_score": 20,
+      "criteria": {"happy_path": 6, "error_handling": 8, "fallback_strategy": 4, "user_communication": 2}
+    },
+    {
+      "id": "to_002",
+      "name": "并行与串行混合编排",
+      "prompt": "用户请求：'对比分析特斯拉、苹果、微软三只股票的最新行情，并生成对比报告'\n可用工具：\n1. get_stock_price(symbol) -> PriceData（支持并发）\n2. get_stock_news(symbol, count=5) -> NewsList\n3. merge_data(datas: List) -> CombinedData\n4. generate_report(data, template) -> ReportURL\n请设计最优执行流程，说明哪些步骤可以并行，哪些必须串行，并估算总耗时。",
+      "max_score": 20,
+      "criteria": {"parallel_identification": 6, "sequential_correct": 6, "efficiency_optimization": 4, "dependency_handling": 4}
+    }
+  ]
+}

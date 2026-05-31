@@ -1,0 +1,20 @@
+{
+  "category": "chain_of_thought",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "cot_001",
+      "name": "多步骤数学推理",
+      "prompt": "小明从家出发去学校，步行速度为 5 km/h。走了一半路程后，他发现忘带作业本，于是以 8 km/h 的速度跑回家。拿到作业本后（耗时 3 分钟），他以 6 km/h 的速度骑车到学校，最终比原计划提前了 5 分钟到达。请问小明家到学校的距离是多少公里？请逐步推理。",
+      "max_score": 20,
+      "criteria": {"equation_setup": 8, "solution_correct": 6, "step_by_step": 4, "unit_handling": 2}
+    },
+    {
+      "id": "cot_002",
+      "name": "逻辑链推理",
+      "prompt": "已知以下条件：\n1. 所有的猫都喜欢鱼\n2. 有些动物会爬树\n3. 所有会爬树的动物都不怕高\n4. Tom 是一只猫\n5. 有些猫会爬树\n\n请判断以下结论是否成立，并给出推理链：\na) Tom 喜欢鱼\nb) Tom 不怕高\nc) 有些喜欢鱼的动物会爬树\n\n请对每个结论分别进行推理。",
+      "max_score": 20,
+      "criteria": {"conclusion_a_correct": 5, "conclusion_b_correct": 5, "conclusion_c_correct": 5, "reasoning_chain_quality": 5}
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# IDE
+.workbuddy/
+--format/
+
+# Generated results & reports
+results/*.json
+reports/*.html
+reports/*.json
+reports/*.txt
+reports/*.docx
+reports/report_*.html
+reports/eval_report_*.html
+reports/eval_summary_*.json
+reports/execution_log_*.txt
+reports/verify_report_*.html
+
+# Backup files
+*.bak
+
+# Docker
+Dockerfile
+docker-compose.yml
+environment.yml
+
+# Misc
+Code_Wiki.md
+deliverables/
+
+# OS
+.DS_Store
+Thumbs.db

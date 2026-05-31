@@ -1,0 +1,20 @@
+{
+  "category": "tool_selection",
+  "dimension": "agent",
+  "cases": [
+    {
+      "id": "ts_001",
+      "name": "根据用户意图选择工具",
+      "prompt": "用户请求：'帮我计算一下这个月的水电费，水费账单是128元，电费账单是256元'\n可用工具列表：\n1. calculator(expression: str) - 执行数学计算\n2. search_web(query: str) - 搜索网络信息\n3. send_email(to: str, subject: str, body: str) - 发送邮件\n4. read_file(path: str) - 读取文件内容\n请选择最合适的工具并说明理由。",
+      "max_score": 15,
+      "criteria": {"correct_tool_selected": 8, "reasoning_quality": 4, "parameters_prepared": 3}
+    },
+    {
+      "id": "ts_002",
+      "name": "多工具组合选择",
+      "prompt": "用户请求：'帮我查一下明天北京的天气，如果下雨就提醒我带伞'\n可用工具列表：\n1. get_weather(city: str, date: str) - 查询天气\n2. send_notification(message: str) - 发送提醒\n3. get_calendar_events(date: str) - 查询日程\n4. set_reminder(time: str, message: str) - 设置提醒\n请分析需要调用哪些工具及调用顺序。",
+      "max_score": 15,
+      "criteria": {"correct_tools_selected": 6, "execution_order": 5, "conditional_logic": 4}
+    }
+  ]
+}

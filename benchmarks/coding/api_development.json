@@ -1,0 +1,22 @@
+{
+  "category": "api_development",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "api_001",
+      "name": "RESTful 用户管理 API",
+      "prompt": "请用 FastAPI 实现一个用户管理 REST API，包含以下端点：\n1. POST /users - 创建用户（name, email）\n2. GET /users - 获取所有用户列表\n3. GET /users/{id} - 获取单个用户\n4. PUT /users/{id} - 更新用户信息\n5. DELETE /users/{id} - 删除用户\n要求：\n1. 使用内存字典存储数据\n2. 包含输入验证\n3. 返回适当的 HTTP 状态码\n4. 添加请求/响应模型（Pydantic）",
+      "language": "python",
+      "max_score": 25,
+      "criteria": {"crud_complete": 10, "input_validation": 5, "status_codes": 5, "pydantic_models": 5}
+    },
+    {
+      "id": "api_002",
+      "name": "带分页和过滤的博客 API",
+      "prompt": "请用 Flask 实现一个博客文章 API，支持：\n1. GET /api/posts - 获取文章列表，支持分页（page, per_page）和过滤（author, tag）\n2. GET /api/posts/{id} - 获取单篇文章\n3. 使用模拟数据（至少 20 篇文章）\n4. 返回格式: {\"data\": [...], \"total\": N, \"page\": N, \"per_page\": N}",
+      "language": "python",
+      "max_score": 25,
+      "criteria": {"pagination_correct": 8, "filtering_correct": 8, "response_format": 5, "mock_data": 4}
+    }
+  ]
+}

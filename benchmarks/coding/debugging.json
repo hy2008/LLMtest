@@ -1,0 +1,30 @@
+{
+  "category": "debugging",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "dbg_001",
+      "name": "修复斐波那契数列 bug",
+      "prompt": "以下代码存在 bug，请找出并修复：\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    fib = [0, 1]\n    for i in range(2, n):\n        fib.append(fib[i-1] + fib[i-2])\n    return fib\n\n# 测试: fibonacci(5) 应返回 [0, 1, 1, 2, 3]\n# 测试: fibonacci(0) 应返回 []\n# 测试: fibonacci(1) 应返回 [0]\n```\n请说明 bug 是什么以及如何修复。",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"bug_identified": 8, "fix_correct": 8, "explanation_quality": 4}
+    },
+    {
+      "id": "dbg_002",
+      "name": "修复闭包陷阱",
+      "prompt": "以下代码存在闭包相关的 bug，请找出并修复：\n```python\ndef create_multipliers():\n    return [lambda x: x * i for i in range(5)]\n\n# 预期: create_multipliers()[0](2) 返回 0\n# 预期: create_multipliers()[1](2) 返回 2\n# 预期: create_multipliers()[4](2) 返回 8\n# 实际: 所有都返回 8\n```\n请解释问题原因并给出修复方案。",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"root_cause_explained": 8, "fix_correct": 8, "explanation_clarity": 4}
+    },
+    {
+      "id": "dbg_003",
+      "name": "修复并发竞态条件",
+      "prompt": "以下代码存在竞态条件 bug，请找出并修复：\n```python\nclass Counter:\n    def __init__(self):\n        self.count = 0\n    \n    def increment(self):\n        temp = self.count\n        self.count = temp + 1\n    \n    def get_count(self):\n        return self.count\n```\n在多线程环境下，多个线程同时调用 increment() 会导致计数丢失。请使用 Python 的 threading 模块修复此问题。",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"race_condition_explained": 6, "thread_safety_fix": 10, "correctness": 4}
+    }
+  ]
+}

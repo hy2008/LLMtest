@@ -11,12 +11,35 @@ from utils.score_engine import CategoryScore
 class PerformanceEvaluator:
     """性能基准测试评估器"""
 
-    def __init__(self, client: LMStudioClient, config=None):
+    # 延迟阈值
+    TTFT_THRESHOLDS = {200: 40, 500: 35, 1000: 25, 2000: 15, float("inf"): 5}
+    TPS_THRESHOLDS = {50: 35, 30: 30, 15: 22, 5: 15, float("inf"): 5}
+
+    COLD_START_THRESHOLDS = {5000: 40, 10000: 35, 20000: 25, 30000: 15, float("inf"): 5}
+    WARM_TTFT_THRESHOLDS = {200: 40, 500: 35, 1000: 25, 2000: 15, float("inf"): 5}
+    WAKEUP_THRESHOLDS = {1000: 40, 3000: 35, 5000: 25, 10000: 15, float("inf"): 5}
+
+    COLD_START_PROMPT = "Hello. Please respond with 'OK' and nothing else."
+    WARMUP_PROMPT = "Say 'ready' only."
+    WAKEUP_PROMPT = "Are you still there? Respond with 'yes'."
+
+    def __init__(self, client: LMStudioClient, config=None, category_weights=None,
+                 include_practical=True):
         self.client = client
         self.config = config
+        self.category_weights = category_weights or {}
+        self.include_practical = include_practical
 
-    async def evaluate(self, model: str, benchmark_config=None) -> List[CategoryScore]:
-        """执行完整的性能基准测试"""
+    async def evaluate(self, model: str, temperature: float = 0.0,
+                       max_tokens: int = 2048, benchmark_config=None) -> List[CategoryScore]:
+        """执行完整的性能基准测试
+        
+        Args:
+            model: 模型名称
+            temperature: 温度参数
+            max_tokens: 最大token数
+            benchmark_config: 基准测试配置
+        """
         categories = []
 
         # 1. 首Token延迟 (TTFT)

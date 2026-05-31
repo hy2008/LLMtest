@@ -1,0 +1,22 @@
+{
+  "category": "test_writing",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "tw_001",
+      "name": "为计算器类编写单元测试",
+      "prompt": "请为以下 Calculator 类编写完整的 pytest 单元测试：\n```python\nclass Calculator:\n    def add(self, a, b):\n        return a + b\n    \n    def subtract(self, a, b):\n        return a - b\n    \n    def multiply(self, a, b):\n        return a * b\n    \n    def divide(self, a, b):\n        if b == 0:\n            raise ValueError('Cannot divide by zero')\n        return a / b\n```\n要求：\n1. 覆盖正常情况和边界情况\n2. 测试除零异常\n3. 使用 pytest 框架\n4. 至少 12 个测试用例",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"coverage_completeness": 8, "edge_cases_tested": 5, "pytest_usage": 4, "test_quality": 3}
+    },
+    {
+      "id": "tw_002",
+      "name": "为栈数据结构编写测试",
+      "prompt": "请为以下 Stack 类编写单元测试：\n```python\nclass Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if self.is_empty():\n            raise IndexError('pop from empty stack')\n        return self.items.pop()\n    \n    def peek(self):\n        if self.is_empty():\n            return None\n        return self.items[-1]\n    \n    def is_empty(self):\n        return len(self.items) == 0\n    \n    def size(self):\n        return len(self.items)\n```\n要求使用 Python unittest 框架，覆盖所有公开方法。",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"all_methods_covered": 6, "empty_stack_tests": 5, "unittest_usage": 5, "assertion_correctness": 4}
+    }
+  ]
+}

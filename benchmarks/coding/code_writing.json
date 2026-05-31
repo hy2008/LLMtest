@@ -1,0 +1,30 @@
+{
+  "category": "code_writing",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "cw_001",
+      "name": "二分查找实现",
+      "prompt": "请用 Python 实现一个通用的二分查找函数 binary_search(arr, target)，要求：\n1. 接受一个有序数组和目标值\n2. 返回目标值的索引，如果不存在返回 -1\n3. 包含类型注解和文档字符串\n4. 处理空数组和边界情况",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"function_defined": 5, "correct_logic": 8, "edge_cases": 4, "type_hints": 3}
+    },
+    {
+      "id": "cw_002",
+      "name": "链表反转",
+      "prompt": "请用 Python 实现一个单链表反转函数 reverse_linked_list(head)。\n要求：\n1. 定义 ListNode 类\n2. 使用迭代方式反转链表\n3. 返回反转后的头节点\n4. 时间复杂度 O(n)，空间复杂度 O(1)",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"class_defined": 3, "correct_reversal": 10, "complexity_optimal": 5, "code_style": 2}
+    },
+    {
+      "id": "cw_003",
+      "name": "快速排序实现",
+      "prompt": "请用 Python 实现快速排序算法 quick_sort(arr)。\n要求：\n1. 原地排序或使用列表推导\n2. 支持升序排列\n3. 处理包含重复元素的数组\n4. 添加适当的注释说明算法思路",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"algorithm_correct": 10, "handles_duplicates": 4, "comments_quality": 3, "efficiency": 3}
+    }
+  ]
+}

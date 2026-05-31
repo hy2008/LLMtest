@@ -1,0 +1,51 @@
+{
+  "benchmark": "math_benchmark",
+  "description": "MATH 风格的数学基准测试",
+  "cases": [
+    {
+      "id": "MATH_001",
+      "name": "等差数列求和",
+      "prompt": "已知等差数列 {a_n} 的首项 a_1 = 3，公差 d = 5，求前 20 项的和 S_20。",
+      "language": "math",
+      "difficulty": "easy",
+      "max_score": 20,
+      "category": "algebra"
+    },
+    {
+      "id": "MATH_002",
+      "name": "圆的面积与周长",
+      "prompt": "一个圆的半径为 7cm，求该圆的面积和周长（保留两位小数，π 取 3.14159）。",
+      "language": "math",
+      "difficulty": "easy",
+      "max_score": 20,
+      "category": "geometry"
+    },
+    {
+      "id": "MATH_003",
+      "name": "二次方程求根",
+      "prompt": "求解二次方程 2x^2 - 7x + 3 = 0 的所有实数根。",
+      "language": "math",
+      "difficulty": "medium",
+      "max_score": 20,
+      "category": "algebra"
+    },
+    {
+      "id": "MATH_004",
+      "name": "三角函数恒等式",
+      "prompt": "已知 sin(θ) = 3/5，且 θ 在第一象限，求 cos(θ) 和 tan(θ) 的值。",
+      "language": "math",
+      "difficulty": "medium",
+      "max_score": 20,
+      "category": "trigonometry"
+    },
+    {
+      "id": "MATH_005",
+      "name": "排列组合问题",
+      "prompt": "从 10 个不同的球中选出 4 个球放入 3 个不同的盒子中，每个盒子至少放一个球，求有多少种不同的放法。",
+      "language": "math",
+      "difficulty": "hard",
+      "max_score": 20,
+      "category": "combinatorics"
+    }
+  ]
+}

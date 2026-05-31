@@ -1,0 +1,20 @@
+{
+  "category": "code_reasoning",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "cr_001",
+      "name": "代码行为分析",
+      "prompt": "请分析以下代码的输出是什么，并解释原因：\n```python\ndef mystery(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\nresults = [mystery(i) for i in range(10)]\nprint(results)\n```\n请：\n1. 说明该函数计算的是什么\n2. 给出完整输出\n3. 分析时间复杂度和空间复杂度",
+      "max_score": 20,
+      "criteria": {"output_correct": 8, "explanation_quality": 6, "complexity_analysis": 6}
+    },
+    {
+      "id": "cr_002",
+      "name": "递归与迭代等价性",
+      "prompt": "以下两个函数是否等价？请分析它们的异同：\n```python\ndef factorial_recursive(n):\n    if n <= 1:\n        return 1\n    return n * factorial_recursive(n - 1)\n\ndef factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result\n```\n请从以下角度分析：\n1. 功能等价性\n2. 性能差异（时间和空间）\n3. 栈溢出风险\n4. 可读性和可维护性",
+      "max_score": 20,
+      "criteria": {"equivalence_analysis": 6, "performance_comparison": 6, "stack_overflow_discussed": 4, "maintainability": 4}
+    }
+  ]
+}

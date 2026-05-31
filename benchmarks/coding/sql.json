@@ -1,0 +1,22 @@
+{
+  "category": "sql",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "sql_001",
+      "name": "复杂查询与分组",
+      "prompt": "假设有以下表结构：\n```sql\nCREATE TABLE orders (\n    id INT PRIMARY KEY,\n    user_id INT,\n    product_name VARCHAR(100),\n    amount DECIMAL(10,2),\n    order_date DATE,\n    status VARCHAR(20)\n);\n```\n请编写 SQL 查询：\n1. 找出 2024 年每月订单总额\n2. 找出消费总额 Top 10 的用户及其总消费额\n3. 找出每个用户最近一次订单的完整信息",
+      "language": "sql",
+      "max_score": 30,
+      "criteria": {"monthly_total": 10, "top_users": 10, "latest_order": 10}
+    },
+    {
+      "id": "sql_002",
+      "name": "多表连接与子查询",
+      "prompt": "假设有以下表结构：\n```sql\nCREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    department_id INT,\n    salary DECIMAL(10,2)\n);\n\nCREATE TABLE departments (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    location VARCHAR(100)\n);\n```\n请编写 SQL 查询：\n1. 查询每个部门的平均工资和人数\n2. 查询工资高于本部门平均工资的员工\n3. 查询在'北京'办公且工资排名部门前3的员工",
+      "language": "sql",
+      "max_score": 30,
+      "criteria": {"dept_stats": 8, "above_avg": 12, "top3_location": 10}
+    }
+  ]
+}

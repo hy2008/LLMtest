@@ -1,0 +1,22 @@
+{
+  "category": "shell",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "sh_001",
+      "name": "日志分析与统计",
+      "prompt": "请编写一个 Shell 脚本 analyze_log.sh，处理 Nginx 访问日志（格式: IP - - [date] \"method path protocol\" status size），要求：\n1. 统计访问量 Top 10 的 IP 地址\n2. 统计 HTTP 状态码分布（2xx, 3xx, 4xx, 5xx 各多少）\n3. 统计访问量 Top 5 的请求路径\n4. 输出格式清晰易读",
+      "language": "shell",
+      "max_score": 25,
+      "criteria": {"ip_stats": 8, "status_code_stats": 7, "path_stats": 7, "output_format": 3}
+    },
+    {
+      "id": "sh_002",
+      "name": "自动备份脚本",
+      "prompt": "请编写一个 Shell 脚本 backup.sh，实现自动备份功能：\n1. 备份指定目录到 /backup/ 下，文件名带日期戳\n2. 使用 tar.gz 压缩\n3. 保留最近 7 天的备份，删除更早的\n4. 备份完成后发送通知（echo 模拟）\n5. 包含错误处理和日志记录",
+      "language": "shell",
+      "max_score": 25,
+      "criteria": {"compression_correct": 6, "date_naming": 4, "retention_policy": 6, "error_handling": 5, "logging": 4}
+    }
+  ]
+}

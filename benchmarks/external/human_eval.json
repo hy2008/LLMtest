@@ -1,0 +1,46 @@
+{
+  "benchmark": "human_eval",
+  "description": "HumanEval 风格的 Python 编程基准测试",
+  "cases": [
+    {
+      "id": "HE_001",
+      "name": "两数之和",
+      "prompt": "编写函数 two_sum(nums, target) 找到数组中和为目标值的两个数的索引。返回一个包含两个索引的列表。假设每个输入只有一个解决方案，且不能重复使用同一个元素。",
+      "language": "python",
+      "difficulty": "easy",
+      "max_score": 20
+    },
+    {
+      "id": "HE_002",
+      "name": "回文数判断",
+      "prompt": "编写函数 is_palindrome(x) 判断一个整数是否是回文数。回文数是指正序和倒序读都相同的整数。不要将整数转换为字符串。",
+      "language": "python",
+      "difficulty": "easy",
+      "max_score": 20
+    },
+    {
+      "id": "HE_003",
+      "name": "有效的括号",
+      "prompt": "编写函数 is_valid(s) 判断一个只包含 '(', ')', '{', '}', '[', ']' 的字符串是否有效。有效字符串需满足：左括号必须用相同类型的右括号闭合，左括号必须以正确的顺序闭合，每个右括号都有一个对应的相同类型的左括号。",
+      "language": "python",
+      "difficulty": "medium",
+      "max_score": 20
+    },
+    {
+      "id": "HE_004",
+      "name": "合并两个有序链表",
+      "prompt": "编写函数 merge_two_lists(l1, l2) 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。链表节点定义为 ListNode(val, next)。",
+      "language": "python",
+      "difficulty": "medium",
+      "max_score": 20
+    },
+    {
+      "id": "HE_005",
+      "name": "最长无重复字符子串",
+      "prompt": "编写函数 length_of_longest_substring(s) 找出字符串中不含有重复字符的最长子串的长度。字符串由英文字母、数字、符号和空格组成。",
+      "language": "python",
+      "difficulty": "medium",
+      "max_score": 20
+    }
+  ]
+}

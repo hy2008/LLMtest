@@ -1,0 +1,30 @@
+{
+  "category": "multilingual",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "ml_001",
+      "name": "多语言 HTTP 客户端",
+      "prompt": "请分别用 Python、JavaScript 和 Go 实现一个简单的 HTTP GET 请求函数，要求：\n1. 接受 URL 参数\n2. 返回响应状态码和响应体\n3. 处理超时和异常\n4. 每个语言实现一个函数",
+      "language": "python/javascript/go",
+      "max_score": 30,
+      "criteria": {"python_correct": 10, "javascript_correct": 10, "go_correct": 10}
+    },
+    {
+      "id": "ml_002",
+      "name": "多语言 JSON 解析",
+      "prompt": "请分别用 Python、JavaScript 和 Rust 实现 JSON 字符串解析为对象/结构体的函数：\n1. 解析包含嵌套对象的 JSON 字符串\n2. 处理解析错误\n3. 提取特定字段\n4. 每个语言独立实现",
+      "language": "python/javascript/rust",
+      "max_score": 30,
+      "criteria": {"python_correct": 10, "javascript_correct": 10, "rust_correct": 10}
+    },
+    {
+      "id": "ml_003",
+      "name": "多语言文件读取",
+      "prompt": "请分别用 Python、C++ 和 Java 实现一个读取文本文件并统计行数的函数：\n1. 打开文件并逐行读取\n2. 统计总行数\n3. 处理文件不存在或权限不足的错误\n4. 每个语言独立实现",
+      "language": "python/cpp/java",
+      "max_score": 30,
+      "criteria": {"python_correct": 10, "cpp_correct": 10, "java_correct": 10}
+    }
+  ]
+}

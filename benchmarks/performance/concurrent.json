@@ -1,0 +1,14 @@
+{
+  "category": "concurrent",
+  "dimension": "performance",
+  "cases": [
+    {
+      "id": "cc_001",
+      "name": "并发请求性能测试",
+      "prompt": "请设计一个并发测试方案，同时向模型发送 4 个不同的请求：\n1. '用Python写一个快速排序'\n2. '解释量子计算的基本原理'\n3. '列出20世纪最重要的10项发明'\n4. '写一篇关于环境保护的短文'\n测试目标是评估模型在并发场景下的响应稳定性。",
+      "metric": "concurrent_success_rate_and_latency",
+      "max_score": 10,
+      "criteria": {"all_4_succeed": 5, "avg_latency_under_5s": 3, "no_degradation": 2}
+    }
+  ]
+}

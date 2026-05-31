@@ -1,0 +1,27 @@
+{
+  "category": "logic",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "logic_001",
+      "name": "条件逻辑推理",
+      "prompt": "某公司有 A、B、C、D 四位员工，关于谁获得了优秀员工奖，有以下信息：\n1. 如果 A 获奖，则 B 也获奖\n2. B 和 C 中只有一人获奖\n3. C 获奖当且仅当 D 获奖\n4. D 没有获奖\n请问：谁获得了优秀员工奖？请给出推理过程。",
+      "max_score": 20,
+      "criteria": {"correct_answer": 10, "reasoning_steps": 6, "logical_consistency": 4}
+    },
+    {
+      "id": "logic_002",
+      "name": "排列组合推理",
+      "prompt": "有五个人（甲、乙、丙、丁、戊）排队，满足以下条件：\n1. 甲不能站在第一个位置\n2. 乙和丙必须相邻\n3. 丁必须在戊前面\n请问有多少种不同的排队方式？请给出计算过程。",
+      "max_score": 20,
+      "criteria": {"correct_count": 10, "constraint_handling": 6, "calculation_process": 4}
+    },
+    {
+      "id": "logic_003",
+      "name": "真假话推理",
+      "prompt": "一个房间里有三个人，他们中有人说真话，有人说假话：\n- A 说：'B 在说谎'\n- B 说：'C 在说谎'\n- C 说：'A 和 B 都在说谎'\n已知至少有一人说真话，也至少有一人说假话。\n请问：谁在说真话，谁在说谎？请给出推理过程。",
+      "max_score": 20,
+      "criteria": {"correct_identification": 10, "case_analysis": 6, "logical_proof": 4}
+    }
+  ]
+}

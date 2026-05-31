@@ -1,0 +1,27 @@
+{
+  "category": "math",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "math_001",
+      "name": "概率计算",
+      "prompt": "一个袋子里有 5 个红球、3 个蓝球和 2 个绿球。从中随机抽取 3 个球（不放回），求：\n1. 抽到恰好 2 个红球的概率\n2. 抽到的 3 个球颜色各不相同的概率\n请给出详细的计算过程。",
+      "max_score": 20,
+      "criteria": {"calculation_correctness": 10, "methodology": 6, "step_clarity": 4}
+    },
+    {
+      "id": "math_002",
+      "name": "微积分应用",
+      "prompt": "求函数 f(x) = x³ - 3x² + 2x 在区间 [0, 3] 上的：\n1. 所有极值点\n2. 最大值和最小值\n3. 曲线与 x 轴围成的面积\n请给出完整的求解过程。",
+      "max_score": 20,
+      "criteria": {"derivative_correct": 6, "extrema_correct": 5, "integral_correct": 6, "process_clear": 3}
+    },
+    {
+      "id": "math_003",
+      "name": "线性方程组求解",
+      "prompt": "求解以下线性方程组：\n2x + 3y - z = 1\nx - y + 2z = -2\n3x + y + z = 4\n请使用高斯消元法或矩阵方法求解，并验证结果。",
+      "max_score": 20,
+      "criteria": {"solution_correct": 10, "method_appropriate": 5, "verification": 3, "steps_shown": 2}
+    }
+  ]
+}

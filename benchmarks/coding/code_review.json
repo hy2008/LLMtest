@@ -1,0 +1,22 @@
+{
+  "category": "code_review",
+  "dimension": "coding",
+  "cases": [
+    {
+      "id": "cr_001",
+      "name": "审查 API 端点代码",
+      "prompt": "请审查以下 FastAPI 代码并提出改进建议：\n```python\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\n@app.get('/users/{user_id}')\ndef get_user(user_id):\n    db = connect_to_db()\n    result = db.execute(f'SELECT * FROM users WHERE id = {user_id}')\n    return result.fetchone()\n\n@app.post('/users')\ndef create_user(name, email):\n    db = connect_to_db()\n    db.execute(f\"INSERT INTO users (name, email) VALUES ('{name}', '{email}')\")\n    return {'status': 'ok'}\n```\n请从安全性、性能、代码规范三个维度进行审查。",
+      "language": "python",
+      "max_score": 25,
+      "criteria": {"security_issues_found": 10, "performance_suggestions": 5, "style_improvements": 5, "constructive_feedback": 5}
+    },
+    {
+      "id": "cr_002",
+      "name": "审查数据处理函数",
+      "prompt": "请审查以下 Pandas 数据处理代码：\n```python\nimport pandas as pd\n\ndef process_data(file_path):\n    df = pd.read_csv(file_path)\n    df['date'] = pd.to_datetime(df['date'])\n    df = df[df['value'] > 0]\n    result = df.groupby('category').sum()\n    result.to_csv('output.csv')\n    return result\n```\n请从健壮性、可维护性、错误处理等角度进行审查并给出改进建议。",
+      "language": "python",
+      "max_score": 20,
+      "criteria": {"robustness_review": 6, "maintainability_review": 6, "error_handling_review": 4, "suggestions_quality": 4}
+    }
+  ]
+}

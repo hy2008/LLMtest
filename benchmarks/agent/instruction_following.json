@@ -1,0 +1,20 @@
+{
+  "category": "instruction_following",
+  "dimension": "agent",
+  "cases": [
+    {
+      "id": "if_001",
+      "name": "多约束指令遵循",
+      "prompt": "请按照以下要求生成一份会议摘要模板：\n1. 包含会议主题、日期、地点、参会人四个基本信息\n2. 正文分为'议题讨论'和'行动项'两部分\n3. 行动项需要包含负责人和截止日期\n4. 使用 Markdown 格式\n5. 总长度不超过 300 字\n6. 不要包含任何示例内容，只提供模板框架",
+      "max_score": 20,
+      "criteria": {"all_sections_present": 8, "format_correct": 4, "length_constraint": 4, "no_example_content": 4}
+    },
+    {
+      "id": "if_002",
+      "name": "条件指令遵循",
+      "prompt": "请处理以下数据：[12, 45, 7, 23, 89, 34, 56, 2, 78, 91]\n要求：\n1. 如果数字大于 50，标记为 '高'\n2. 如果数字在 20-50 之间，标记为 '中'\n3. 如果数字小于 20，标记为 '低'\n4. 输出为 JSON 格式\n5. 按原始顺序输出\n6. 同时输出统计信息：高/中/低各有多少个",
+      "max_score": 15,
+      "criteria": {"classification_correct": 6, "json_format": 3, "order_preserved": 3, "statistics_correct": 3}
+    }
+  ]
+}

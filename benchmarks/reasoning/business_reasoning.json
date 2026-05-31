@@ -1,0 +1,20 @@
+{
+  "category": "business_reasoning",
+  "dimension": "reasoning",
+  "cases": [
+    {
+      "id": "br_001",
+      "name": "商业决策分析",
+      "prompt": "一家软件公司面临选择：\n- 方案A：投入 500 万开发新产品，预计 18 个月上市，第一年收入 800 万\n- 方案B：投入 200 万升级现有产品，预计 6 个月完成，第一年收入 400 万\n- 方案C：投入 100 万与第三方合作，预计 3 个月上线，第一年收入 300 万（需分30%给合作方）\n\n已知公司当前现金流 600 万，每月固定支出 50 万。请从风险、收益、资金安全性三个维度分析，并给出推荐方案。",
+      "max_score": 25,
+      "criteria": {"financial_analysis": 10, "risk_assessment": 6, "recommendation_quality": 5, "cash_flow_awareness": 4}
+    },
+    {
+      "id": "br_002",
+      "name": "市场竞争分析",
+      "prompt": "某电商平台上，A 品牌手机市场份额 35%，B 品牌 25%，C 品牌 15%，其他品牌 25%。A 品牌即将发布新款，预计降价 10% 同时提升性能 20%。B 品牌同步推出促销活动。\n请分析：\n1. A 品牌降价后各品牌市场份额可能的变化\n2. B 品牌促销的最佳应对策略\n3. 小品牌（C及其他）的生存空间分析",
+      "max_score": 20,
+      "criteria": {"market_analysis": 8, "competitive_strategy": 6, "small_player_impact": 4, "reasoning_quality": 2}
+    }
+  ]
+}
