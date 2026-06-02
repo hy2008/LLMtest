@@ -209,7 +209,28 @@ class ScoreEngine:
                 continue
 
         self.results.extend(loaded)
+        self.deduplicate()
         return loaded
+
+    def deduplicate(self):
+        """去重：每个模型只保留维度最全、总分最高的结果"""
+        expected = {"coding", "agent", "reasoning", "performance", "rag"}
+        by_model: Dict[str, List[ModelEvalResult]] = {}
+        for r in self.results:
+            by_model.setdefault(r.model_id, []).append(r)
+
+        deduped = []
+        for mid, results in by_model.items():
+            if len(results) == 1:
+                deduped.append(results[0])
+                continue
+            best = max(results, key=lambda r: (
+                sum(1 for d in expected if d in r.dimensions),
+                r.overall_score
+            ))
+            deduped.append(best)
+
+        self.results = deduped
 
     @staticmethod
     def reverse_validation(
