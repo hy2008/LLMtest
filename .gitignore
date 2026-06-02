@@ -36,6 +36,17 @@ environment.yml
 Code_Wiki.md
 deliverables/
 
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Logs
+logs/*.log
+
+# Results archive
+results/archive/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -43,14 +43,12 @@ class ModelEvalResult:
     metadata: Dict[str, Any] = field(default_factory=dict)
 
     def calculate_overall(self, weights: Dict[str, float]):
-        """计算加权总分"""
-        total_weight = 0
+        """计算加权总分（缺失维度按0分处理，不重新归一化）"""
         weighted_sum = 0
         for dim_name, weight in weights.items():
             if dim_name in self.dimensions:
                 weighted_sum += self.dimensions[dim_name].score * weight
-                total_weight += weight
-        self.overall_score = weighted_sum / total_weight if total_weight > 0 else 0
+        self.overall_score = weighted_sum
 
     def to_dict(self) -> Dict[str, Any]:
         result = {
@@ -205,6 +203,7 @@ class ScoreEngine:
                         categories=categories,
                         weight=dim_data.get("weight", 1.0)
                     )
+                result.calculate_overall(self.weights)
                 loaded.append(result)
             except (json.JSONDecodeError, KeyError):
                 continue

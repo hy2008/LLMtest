@@ -254,8 +254,28 @@ class LMStudioClient:
             return await self._non_stream_chat(payload, start_time)
 
     async def _non_stream_chat(self, payload: Dict, start_time: float) -> CompletionResult:
-        """非流式请求"""
-        data = await self._request_with_retry("POST", "chat/completions", payload)
+        """非流式请求 (使用 requests 库通过 run_in_executor 执行，避免 aiohttp 超时问题)"""
+        import requests as _requests
+        loop = asyncio.get_event_loop()
+        url = f"{self.base_url}/chat/completions"
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json"
+        }
+
+        def _sync_request():
+            resp = _requests.post(url, headers=headers, json=payload, timeout=self.timeout.total if hasattr(self.timeout, 'total') else 3600)
+            if resp.status_code != 200:
+                raise ConnectionError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+            return resp.json()
+
+        try:
+            data = await loop.run_in_executor(None, _sync_request)
+        except _requests.exceptions.Timeout:
+            raise ConnectionError(f"API 请求超时 (total={self.timeout.total if hasattr(self.timeout, 'total') else 3600}s)")
+        except _requests.exceptions.ConnectionError as e:
+            raise ConnectionError(f"API 连接失败: {e}")
+
         latency = (time.perf_counter() - start_time) * 1000
 
         choice = data.get("choices", [{}])[0]
